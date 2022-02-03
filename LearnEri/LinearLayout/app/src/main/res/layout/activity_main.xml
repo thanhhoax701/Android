@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Hôm nay học LinearLayout
+orientation: căn theo chiều dọc - ngang
+gravity: căn giữa (center)
+
+1) Khi xài weightSum (ở thẻ cha):
+=> set layout_weight sao cho bằng với giá trị weightSum
+=> Nhớ đổi layout_width về 0dp hoặc layout_height về 0dp
+-->
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:orientation="horizontal"-->
+<!--    tools:context=".MainActivity"-->
+<!--    android:weightSum="10">-->
+
+<!--    <Button-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Xin chào"-->
+<!--        android:layout_weight="3"-->
+<!--        android:layout_marginHorizontal="10px"/>-->
+
+<!--    <Button-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Tạm biệt nha"-->
+<!--        android:layout_weight="7"-->
+<!--        android:layout_marginHorizontal="10px"/>-->
+
+<!--</LinearLayout>-->
+
+
+<!-- Hôm nay học RelativeLayout
+1) Muốn btn2 nằm dưới btn1 thì sử dụng layout_below
+    => xét id của button muốn nằm dưới là được
+
+2) Sử dụng layout_alignParentRight để canh lề
+
+3) layout_alignRight căn lề btn2 dựa theo btn1 (id của btn1)
+
+4) layout_centerInParent để căn giữa theo chiều ngang và dọc
+
+5) layout_centerVertical dùng để căn giữa theo chiều dọc;
+   layout_centerHorizontal dùng để căn giữa theo chiều ngang
+
+6) Sử dụng layout_above (xét id của nút muốn nằm trên)
+    => Căn nút Tạm biệt lên trên nút Hello
+-->
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    tools:context=".MainActivity">-->
+
+<!--    <Button-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Xin chào các bạn"-->
+<!--        android:id="@+id/btn1"-->
+<!--        android:layout_alignParentRight="true"/>-->
+
+
+<!--    <Button-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Xin chào"-->
+<!--        android:id="@+id/btn2"-->
+<!--        android:layout_below="@id/btn1"-->
+<!--        android:layout_alignLeft="@id/btn1"/>-->
+
+
+<!--    <Button-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Hello my friend!!!"-->
+<!--        android:layout_centerInParent="true"/>-->
+
+
+<!--    <Button-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerVertical="true"-->
+<!--        android:text="Hello"-->
+<!--        android:id="@+id/btn3"/>-->
+
+
+<!--    <Button-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerVertical="true"-->
+<!--        android:text="Tạm biệt"-->
+<!--        android:layout_above="@id/btn3"/>-->
+
+<!--</RelativeLayout>-->
+
+
+<!-- Hôm nay học FrameLayout
+1) Dùng layout_gravity để căn ảnh ra giữa
+2) Chèn ảnh thì dùng src hoặc background
+-->
+<!--<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    tools:context=".MainActivity"-->
+<!--    android:orientation="vertical">-->
+
+<!--    <ImageView-->
+<!--        android:layout_width="431dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:src="@drawable/me"/>-->
+
+<!--    <ImageView-->
+<!--        android:layout_width="132dp"-->
+<!--        android:layout_height="121dp"-->
+<!--        android:layout_gravity="center_horizontal"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:src="@drawable/redmoon" />-->
+
+<!--</FrameLayout>-->
+
+
+<!-- Hôm nay học TableLayout
+=> Ít được sử dụng
+-->
+<!--<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    tools:context=".MainActivity">-->
+
+<!--    <TableRow>-->
+<!--        <Button-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Button A1"/>-->
+<!--        <Button-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Button A2"/>-->
+<!--        <Button-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Button A3"/>-->
+<!--    </TableRow>-->
+<!--    <TableRow>-->
+<!--        <Button-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Button B1"/>-->
+<!--        <Button-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Button B2"/>-->
+<!--        <Button-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Button B3"/>-->
+<!--    </TableRow>-->
+<!--    <TableRow>-->
+<!--        <Button-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Button C1"/>-->
+<!--        <Button-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Button C2"/>-->
+<!--        <Button-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Button C3"/>-->
+<!--    </TableRow>-->
+
+<!--</TableLayout>-->
+
+
+<!-- Hôm nay học ConstraintLayout
+1) Căn lề với layout_constraintBottom_toBottomOf tương tự là left, right, top
+2) Ràng buộc giữa view mẹ và con dựa trên view mẹ (parent ấy)
+-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello mày"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/textview"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Xin chào"
+        android:textSize="30dp"
+        app:layout_constraintRight_toRightOf="@+id/textview"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
