@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="Chọn số điểm trên trục x"
+        android:textColor="#0000ff"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="10dp"
+            android:text="Trong khoảng 4 đến 10"
+            android:textColor="#0000ff"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/sodiem"
+            android:layout_width="40sp"
+            android:layout_height="wrap_content"
+            android:background="#ffffaa"
+            android:hint="10"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btnnhap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nhập" />
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mảng giá trị trên trục x"
+        android:textColor="#040480"
+        android:textStyle="bold" />
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/edtx1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/edtx2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/edtx3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/edtx4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/edtx5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/edtx6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/edtx7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/edtx8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/edtx9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/edtx10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:visibility="invisible" />
+        </TableRow>
+    </TableLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mảng giá trị trên trục y"
+        android:textColor="#040480"
+        android:textStyle="bold" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow>
+
+            <EditText
+                android:id="@+id/edty1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/edty2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/edty3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/edty4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/edty5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/edty6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/edty7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/edty8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/edty9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/edty10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:visibility="invisible" />
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/ve"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VẼ" />
+
+        <Button
+            android:id="@+id/trove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TRỞ VỀ" />
+
+    </LinearLayout>
+
+</LinearLayout>

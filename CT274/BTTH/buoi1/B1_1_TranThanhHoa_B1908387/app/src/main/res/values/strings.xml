@@ -1,0 +1,26 @@
+<resources>
+
+    <string name="app_name">B1_1_TranThanhHoa_B1908387</string>
+
+    <string name="btntest">TEST</string>
+
+    <string name="btnexit">EXIT</string>
+
+    <string name="content1">btnimage1</string>
+
+    <string name="ed_nam">Enter massage</string>
+
+    <string name="txt1">Hien thi van ban duoc nhap vao EditText</string>
+
+    <string name="content2">btnimage2</string>
+
+    <string name="content3">btnimage3</string>
+
+    <string name="star">StarStyle</string>
+
+    <string name="chkautosave">AutoSave</string>
+
+    <string name="rb1">Option 1</string>
+
+    <string name="rb2">Option 2</string>
+</resources>
