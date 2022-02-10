@@ -186,7 +186,7 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 }
                 switch (item.getItemId()) {
-                    case R.id.item3_2: btnpopup.setText("MENU PAST");
+                    case R.id.item3_2: btnpopup.setText("MENU PASTE");
                     break;
                 }
                 switch (item.getItemId()) {
