@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingTop="40dp"
+    android:paddingTop="30dp"
     tools:context=".MainActivity">
 
     <TableLayout
@@ -15,10 +15,10 @@
         <TableRow>
 
             <Button
-                android:id="@+id/btntest"
+                android:id="@+id/btnTest"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/btntest"
+                android:text="@string/btnTest"
                 android:textSize="22sp" />
 
             <ImageButton
@@ -30,19 +30,19 @@
                 android:src="@drawable/star_be_ti" />
 
             <Button
-                android:id="@+id/btnexit"
+                android:id="@+id/btnExit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/btnexit"
+                android:text="@string/btnExit"
                 android:textSize="22sp" />
         </TableRow>
     </TableLayout>
 
     <EditText
-        android:id="@+id/edittext"
+        android:id="@+id/editText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/ed_nam" />
+        android:hint="@string/txtMassage" />
 
     <RadioGroup
         android:id="@+id/rg"
@@ -71,11 +71,11 @@
         android:orientation="horizontal">
 
         <CheckBox
-            android:id="@+id/chkAutosave"
+            android:id="@+id/checkAutoSave"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#bbb"
-            android:text="@string/chkautosave"
+            android:text="@string/checkAutoSave"
             android:textSize="18sp" />
 
         <CheckBox
@@ -127,4 +127,5 @@
             android:src="@drawable/ca_lia_thia_2"
             android:visibility="invisible" />
     </LinearLayout>
+
 </LinearLayout>

@@ -22,35 +22,35 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button btntest=(Button)findViewById(R.id.btntest);
-        btntest.setOnClickListener(new View.OnClickListener() {
+        Button btnTest = (Button)findViewById(R.id.btnTest);
+        btnTest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 displayToasr("You have checked TEST Button");
             }
         });
-        ImageButton btnImage=(ImageButton) findViewById(R.id.btnImage1);
+        ImageButton btnImage = (ImageButton) findViewById(R.id.btnImage1);
         btnImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 displayToasr("You have checked IMAGEButton");
             }
         });
-        Button btnexit=(Button)findViewById(R.id.btnexit);
-        btnexit.setOnClickListener(new View.OnClickListener() {
+        Button btnExit = (Button)findViewById(R.id.btnExit);
+        btnExit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 displayToasr("You have checked EXIT Button");
                 System.exit(0);
             }
         });
-        ToggleButton btnToggle=(ToggleButton) findViewById(R.id.toggle_1);
+        ToggleButton btnToggle = (ToggleButton) findViewById(R.id.toggle_1);
         btnToggle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                EditText edit=(EditText)findViewById(R.id.edittext);
-                String text=edit.getText().toString();
-                TextView txt=(TextView)findViewById(R.id.text);
+                EditText edit = (EditText) findViewById(R.id.editText);
+                String text = edit.getText().toString();
+                TextView txt = (TextView) findViewById(R.id.text);
                 if(((ToggleButton)v).isChecked())
                     txt.setText(text);
                 else
@@ -62,23 +62,23 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId)
             {
-                RadioButton rb1=(RadioButton)findViewById(R.id.rb1);
-                RadioButton rb2=(RadioButton)findViewById(R.id.rb2);
-                ImageView image1=(ImageView)findViewById(R.id.image1);
-                ImageView image2=(ImageView)findViewById(R.id.image2);
-                if (rb1.isChecked()){
+                RadioButton rb1 = (RadioButton) findViewById(R.id.rb1);
+                RadioButton rb2 = (RadioButton) findViewById(R.id.rb2);
+                ImageView image1 = (ImageView) findViewById(R.id.image1);
+                ImageView image2 = (ImageView) findViewById(R.id.image2);
+                if (rb1.isChecked()) {
                     displayToasr("Option 1 checked!");
                     image1.setVisibility(ImageView.VISIBLE);
                     image2.setVisibility(ImageView.INVISIBLE);
                 }
-                if (rb2.isChecked()){
+                if (rb2.isChecked()) {
                     displayToasr("Option 2 checked!");
                     image2.setVisibility(ImageView.VISIBLE);
                     image1.setVisibility(ImageView.INVISIBLE);
                 }
             }
         });
-        CheckBox chkAutoSau=(CheckBox) findViewById(R.id.chkAutosave);
+        CheckBox chkAutoSau = (CheckBox) findViewById(R.id.checkAutoSave);
         chkAutoSau.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -88,11 +88,11 @@ public class MainActivity extends AppCompatActivity {
                     displayToasr("AutoSave CheckBox have unchecked");
             }
         });
-        CheckBox chkStar=(CheckBox) findViewById(R.id.star);
+        CheckBox chkStar = (CheckBox) findViewById(R.id.star);
         chkStar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(((CheckBox)v).isChecked())
+                if(((CheckBox) v).isChecked())
                     displayToasr("StarStyle CheckBox have checked");
                 else
                     displayToasr("StarSyle CheckBox have unchecked");

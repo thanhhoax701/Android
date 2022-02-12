@@ -19,15 +19,15 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    Button btnmenu, btnpopup, thoat;
+    Button btnContextMenu, btnPopupMenu, thoat;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        btnmenu = (Button) findViewById(R.id.btntmenu);
-        btnmenu.setOnCreateContextMenuListener(this);
-        btnpopup = (Button) findViewById(R.id.btnpopup);
+        btnContextMenu = (Button) findViewById(R.id.btnContextMenu);
+        btnContextMenu.setOnCreateContextMenuListener(this);
+        btnPopupMenu = (Button) findViewById(R.id.btnPopupMenu);
         thoat = (Button) findViewById(R.id.btnthoat);
         thoat.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btnpopup.setOnClickListener(new View.OnClickListener() {
+        btnPopupMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showPopupMenu();
@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu_ngucanh, menu);
     }
-    // Xử lý click chọn item trên context menu
+    // Xử lý click chọn item trên Context menu
     @Override
     public boolean onContextItemSelected(MenuItem item) {
         AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
@@ -173,7 +173,7 @@ public class MainActivity extends AppCompatActivity {
     // Tạo Popup menu
     private void showPopupMenu(){
         // Tạo 1 popupmenu.
-        PopupMenu popupMenu=new PopupMenu(this,btnpopup);
+        PopupMenu popupMenu=new PopupMenu(this, btnPopupMenu);
         //Lấy giao diện menu trong resoucse.
 
         popupMenu.getMenuInflater().inflate(R.menu.menu_popup,popupMenu.getMenu());
@@ -182,19 +182,19 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
                 switch (item.getItemId()) {
-                    case R.id.item3_1: btnpopup.setText("MENU COPY");
+                    case R.id.item3_1: btnPopupMenu.setText("MENU COPY");
                     break;
                 }
                 switch (item.getItemId()) {
-                    case R.id.item3_2: btnpopup.setText("MENU PASTE");
+                    case R.id.item3_2: btnPopupMenu.setText("MENU PASTE");
                     break;
                 }
                 switch (item.getItemId()) {
-                    case R.id.item3_3: btnpopup.setText("MENU SAVE");
+                    case R.id.item3_3: btnPopupMenu.setText("MENU SAVE");
                     break;
                 }
                 switch (item.getItemId()) {
-                    case R.id.item3_4: btnpopup.setText("MENU DELETE");
+                    case R.id.item3_4: btnPopupMenu.setText("MENU DELETE");
                         break;
                 }
                 return false;
