@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -100,7 +102,7 @@ public class MainActivity2 extends AppCompatActivity {
                                 // Chuyển thành mili giây
                                 Date date = new Date(l * 1000L);
                                 // Định dạng thứ ngày tháng năm
-                                SimpleDateFormat simpleDateFormat = new SimpleDateFormat("EEEE yyyy-MM-dd");
+                                SimpleDateFormat simpleDateFormat = new SimpleDateFormat("EEE, d MMM");
                                 String Day = simpleDateFormat.format(date);
 
                                 JSONObject jsonObjectTemp = jsonObjectList.getJSONObject("temp");
@@ -143,6 +145,14 @@ public class MainActivity2 extends AppCompatActivity {
                 });
         // thực thi stringRequest
         requestQueue.add(stringRequest);
+    }
+
+    // Tạo option menu
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_tuychon, menu);
+        return true;
     }
 
 }

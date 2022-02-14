@@ -19,7 +19,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/btnTest"
-                android:textSize="22sp" />
+                android:textSize="22sp"
+                android:background="#ccc"
+                android:textColor="@color/black"/>
 
             <ImageButton
                 android:id="@+id/btnImage1"
@@ -34,7 +36,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/btnExit"
-                android:textSize="22sp" />
+                android:textSize="22sp"
+                android:background="#ccc"
+                android:textColor="@color/black"/>
         </TableRow>
     </TableLayout>
 

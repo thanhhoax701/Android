@@ -3,18 +3,24 @@
     <item android:id="@+id/item1"
         android:icon="@drawable/stop"
         android:title="NHÓM" />
-    <item android:id="@+id/item2"
+    <item
+        android:id="@+id/item2"
+        android:color="#E91E63"
         android:icon="@drawable/forward"
         android:title="DANH SÁCH">
         <!-- "file" submenu -->
         <menu>
-            <item android:id="@+id/item2_1"
+            <item
+                android:id="@+id/item2_1"
                 android:title="Tiếp thị" />
-            <item android:id="@+id/item2_2"
+            <item
+                android:id="@+id/item2_2"
                 android:title="Nhập hàng" />
-            <item android:id="@+id/item2_3"
+            <item
+                android:id="@+id/item2_3"
                 android:title="Giao hàng" />
-            <item android:id="@+id/item2_4"
+            <item
+                android:id="@+id/item2_4"
                 android:title="Kế toán" />
         </menu>
     </item>

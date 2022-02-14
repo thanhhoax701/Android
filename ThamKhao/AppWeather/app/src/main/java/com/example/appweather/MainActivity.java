@@ -9,7 +9,11 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -23,7 +27,6 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.squareup.picasso.Picasso;
-//import com.bumptech.glide.Glide;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -33,7 +36,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
-
     EditText edtSearch;
     Button btnSearch, btnChangeActivity;
     TextView txtViewName, txtViewCountry, txtViewTemp, txtViewStatus, txtViewHumidity, txtViewCloud, txtViewMill, txtViewDay;
@@ -115,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
                             // Giá trị mili giây
                             Date date = new Date(l*1000L);
                             // Định dạng thứ ngày tháng năm giờ phút giây
-                            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("EEEE yyyy-MM-dd HH-mm-ss");
+                            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("EEEE, d MMM yyyy HH:mm:ss");
                             String Day = simpleDateFormat.format(date);
 
                             // Xét text cho ngày
@@ -207,5 +209,36 @@ public class MainActivity extends AppCompatActivity {
         txtViewMill = (TextView) findViewById(R.id.textViewMill);
         txtViewDay = (TextView) findViewById(R.id.textViewDay);
         imgIcon = (ImageView) findViewById(R.id.imageIcon);
+    }
+
+    // Tạo option menu
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_tuychon, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Tải ImageView đã khai báo trong Layout để đặt hình vào.
+        ImageView hinh = (ImageView) findViewById(R.id.imageIcon);
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.item1:
+                return true;
+            case R.id.item2:
+                return true;
+            case R.id.item3:
+                String city = edtSearch.getText().toString();
+                Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+                intent.putExtra("name", city);
+                startActivity(intent);
+                return true;
+            case R.id.item4:
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }

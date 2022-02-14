@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/item1"
+        android:title="VỊ TRÍ HIỆN TẠI"/>
+    <item android:id="@+id/item2"
+        android:title="DỰ BÁO 2 NGÀY TIẾP THEO"/>
+    <item android:id="@+id/item3"
+        android:title="DỰ BÁO 7 NGÀY TIẾP THEO"/>
+    <item android:id="@+id/item4"
+        android:title="LỊCH SỬ THỜI TIẾT TRONG 30 NGÀY"/>
+</menu>

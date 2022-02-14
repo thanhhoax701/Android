@@ -23,11 +23,12 @@
             android:gravity="center"/>
 
         <TextView
+            android:id="@+id/textViewTrangthai"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textViewTrangthai"
             android:text="Trạng thái"
-            android:textSize="25dp"/>
+            android:textSize="25dp"
+            android:textStyle="italic" />
 
     </LinearLayout>
 
@@ -51,19 +52,21 @@
 
             <TextView
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="45dp"
                 android:layout_weight="1"
-                android:textSize="18dp"
-                android:text="Max Temp"
-                android:id="@+id/textViewMaxTemp"/>
+                android:textSize="20dp"
+                android:text="Min Temp"
+                android:textColor="@color/red"
+                android:id="@+id/textViewMinTemp"/>
 
             <TextView
+                android:id="@+id/textViewMaxTemp"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="45dp"
                 android:layout_weight="1"
-                android:textSize="18dp"
-                android:text="Min Temp"
-                android:id="@+id/textViewMinTemp"/>
+                android:text="Max Temp"
+                android:textColor="@color/red"
+                android:textSize="20dp" />
 
         </LinearLayout>
 
