@@ -11,7 +11,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:gravity="center">
+        android:gravity="center"
+        android:layout_marginLeft="2dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -19,7 +20,7 @@
             android:text="Ngày tháng"
             android:id="@+id/textViewNgay"
             android:textSize="30dp"
-            android:textColor="#000"
+            android:textColor="@color/black"
             android:gravity="center"/>
 
         <TextView
@@ -27,7 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Trạng thái"
-            android:textSize="25dp"
+            android:textSize="22dp"
             android:textStyle="italic" />
 
     </LinearLayout>
@@ -40,7 +41,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:weightSum="3"
+            android:weightSum="4"
             android:gravity="center">
 
             <ImageView
@@ -51,13 +52,24 @@
                 android:id="@+id/imageViewTrangthai"/>
 
             <TextView
+                android:id="@+id/textViewMinTemp"
                 android:layout_width="0dp"
                 android:layout_height="45dp"
                 android:layout_weight="1"
-                android:textSize="20dp"
                 android:text="Min Temp"
                 android:textColor="@color/red"
-                android:id="@+id/textViewMinTemp"/>
+                android:textSize="20dp"
+                android:gravity="center_vertical"/>
+
+            <TextView
+                android:id="@+id/textViewIcon"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:text="/"
+                android:textColor="@color/red"
+                android:textSize="20dp"
+                android:gravity="center"/>
 
             <TextView
                 android:id="@+id/textViewMaxTemp"
@@ -66,7 +78,8 @@
                 android:layout_weight="1"
                 android:text="Max Temp"
                 android:textColor="@color/red"
-                android:textSize="20dp" />
+                android:textSize="20dp"
+                android:gravity="center_vertical"/>
 
         </LinearLayout>
 

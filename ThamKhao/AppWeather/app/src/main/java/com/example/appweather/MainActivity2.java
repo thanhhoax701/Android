@@ -147,12 +147,4 @@ public class MainActivity2 extends AppCompatActivity {
         requestQueue.add(stringRequest);
     }
 
-    // Tạo option menu
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_tuychon, menu);
-        return true;
-    }
-
 }

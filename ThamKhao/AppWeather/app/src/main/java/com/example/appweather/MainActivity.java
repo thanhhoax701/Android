@@ -4,21 +4,18 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
-import android.media.Image;
-import android.net.Uri;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.webkit.WebViewClient;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -37,11 +34,11 @@ import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
     EditText edtSearch;
-    Button btnSearch, btnChangeActivity;
+    Button btnChangeActivity;
     TextView txtViewName, txtViewCountry, txtViewTemp, txtViewStatus, txtViewHumidity, txtViewCloud, txtViewMill, txtViewDay;
-    ImageView imgIcon;
+    ImageView iconSearch, imgIcon;
 
-    String City = "";
+    String City = "", lat, lon;
 
     Context context;
 
@@ -55,8 +52,9 @@ public class MainActivity extends AppCompatActivity {
         Anhxa();
         // gán 1 thành phố mặc định khi mở app
         getCurrentWeatherData("Saigon");
+        getOneCallApi(lat, lon);
 
-        btnSearch.setOnClickListener(new View.OnClickListener() {
+        iconSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String city = edtSearch.getText().toString();
@@ -93,22 +91,29 @@ public class MainActivity extends AppCompatActivity {
         // Thực thi những request mà mình gửi đi
         // Cú pháp Request của thư viện Volley
         RequestQueue requestQueue = Volley.newRequestQueue(MainActivity.this);
-        String url = "https://api.openweathermap.org/data/2.5/weather?q="+data+"&units=metric&lang=vi&appid=ba4bda0d7fb66405e86b21c047a9887f";
+        String url = "https://api.openweathermap.org/data/2.5/weather?q="+data+"&units=metric&lang=vi&appid=7b16a3bb0d4c6253ab56ca6a2a14f500";
         StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
                         // Dòng dưới là hiển thị ra Logcat để coi thử thôi
-                        // Log.d("ketqua", response);
+                         Log.d("ketqua", response);
                         try {
                             // Gán biến response vào để đọc dữ liệu từ Object
                             JSONObject jsonObject = new JSONObject(response);
+
+                            // Lấy lon và lat
+                            JSONObject jsonObjectLonLat = jsonObject.getJSONObject("coord");
+                            lat = jsonObjectLonLat.getString("lon");
+                            lon = jsonObjectLonLat.getString("lat");
+                            Log.d("lat", lat);
+                            Log.d("lon", lon);
 
                             // Lấy ra tên thành phố
                             String name = jsonObject.getString("name");
 
                             // Xét text cho tên thành phố
-                            txtViewName.setText("Tên thành phố: "+name);
+                            txtViewName.setText("Tên thành phố: " + name);
 
                             // Lấy ra ngày tháng
                             String day = jsonObject.getString("dt");
@@ -146,17 +151,17 @@ public class MainActivity extends AppCompatActivity {
                             // Lấy dữ liệu từ tag "main" ---------
                             // Dòng đầu có nghĩa là lấy dữ liệu trong tag main từ object lớn về
                             JSONObject jsonObjectMain = jsonObject.getJSONObject("main");
-                            String nhietdo = jsonObjectMain.getString("temp");
+//                            String nhietdo = jsonObjectMain.getString("temp");
                             String doam = jsonObjectMain.getString("humidity");
 
                             // Nhiệt độ có kiểu dữ liệu là double
                             // -> cần chuyển đổi nhiệt độ sang kiểu int
-                            Double a = Double.valueOf(nhietdo);
+//                            Double a = Double.valueOf(nhietdo);
                             // Đổi về kiểu int bằng intValue rồi đổi sang chuỗi
-                            String Nhietdo = String.valueOf(a.intValue());
+//                            String Nhietdo = String.valueOf(a.intValue());
 
                             // Xét text cho nhiệt độ và độ ẩm
-                            txtViewTemp.setText(Nhietdo+"°C");
+//                            txtViewTemp.setText(Nhietdo+"°C");
                             txtViewHumidity.setText(doam+"%");
 
 
@@ -179,7 +184,7 @@ public class MainActivity extends AppCompatActivity {
                             String country = jsonObjectSys.getString("country");
 
                             // Xét text cho country
-                            txtViewCountry.setText("Tên quốc gia: "+country );
+                            txtViewCountry.setText("Tên quốc gia: " + country);
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -195,10 +200,49 @@ public class MainActivity extends AppCompatActivity {
         requestQueue.add(stringRequest);
     }
 
+    public void getOneCallApi (String lat1, String lon1) {
+        RequestQueue requestQueue = Volley.newRequestQueue(MainActivity.this);
+//        String url = "https://api.openweathermap.org/data/2.5/onecall?lat="+lat+"&lon="+lon+"&appid=7b16a3bb0d4c6253ab56ca6a2a14f500";
+        String url = "https://api.openweathermap.org/data/2.5/onecall?lat="+lat1+"&lon="+lon1+"&appid=7b16a3bb0d4c6253ab56ca6a2a14f500";
+        Log.d("url", url);
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        Log.d("HI", response);
+                        try {
+                            JSONObject jsonObject = new JSONObject(response);
+                            JSONObject jsonObjectCurrent = jsonObject.getJSONObject("current");
+                            String nhietdo = jsonObjectCurrent.getString("temp");
+
+                            // Nhiệt độ có kiểu dữ liệu là double
+                            // -> cần chuyển đổi nhiệt độ sang kiểu int
+                            Double a = Double.valueOf(nhietdo);
+                            // Đổi về kiểu int bằng intValue rồi đổi sang chuỗi
+                            String Nhietdo = String.valueOf(a.intValue());
+
+                            // Xét text cho nhiệt độ và độ ẩm
+                            txtViewTemp.setText(Nhietdo+"°C");
+
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Log.d("error", "hoa");
+                    }
+                });
+        requestQueue.add(stringRequest);
+    }
+
     // Ánh xạ để lấy từng thành phần đã được đặt id
     private void Anhxa() {
         edtSearch = (EditText) findViewById(R.id.editTextSearch);
-        btnSearch = (Button) findViewById(R.id.buttonSearch);
+        iconSearch = (ImageView) findViewById(R.id.iconSearch);
         btnChangeActivity = (Button) findViewById(R.id.buttonChangeActivity);
         txtViewName = (TextView) findViewById(R.id.textViewName);
         txtViewCountry = (TextView) findViewById(R.id.textViewCountry);
@@ -210,6 +254,7 @@ public class MainActivity extends AppCompatActivity {
         txtViewDay = (TextView) findViewById(R.id.textViewDay);
         imgIcon = (ImageView) findViewById(R.id.imageIcon);
     }
+
 
     // Tạo option menu
     @Override
