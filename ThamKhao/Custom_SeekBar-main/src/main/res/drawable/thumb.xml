@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- specifications of thumb of seekbar-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/purple_200"/>
+    <size android:height="30dp" android:width="25dp"/>
+    <corners android:radius="5dp"/>
+</shape>

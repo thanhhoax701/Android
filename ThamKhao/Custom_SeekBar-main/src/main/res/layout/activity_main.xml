@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#458C85"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/Relative_1"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_weight="2">
+
+
+        <TextView
+            android:id="@+id/textViewSelectSizeOfArray"
+            android:layout_width="273dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/seekbar"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+
+            android:layout_marginBottom="9dp"
+            android:text="Custom Seek Bar"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="25dp" />
+
+        <SeekBar
+            android:id="@+id/seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminate="false"
+            android:max="50"
+            android:progress="0"
+            android:progressDrawable="@drawable/custom_seekbar"
+            android:thumb="@drawable/thumb" />
+
+        <TextView
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="199dp"
+            android:padding="10dp"
+            android:text="0"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            android:textStyle="bold">
+
+        </TextView>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

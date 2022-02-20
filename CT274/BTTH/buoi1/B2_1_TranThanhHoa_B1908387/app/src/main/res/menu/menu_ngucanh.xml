@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/item1"
+    <item android:id="@+id2/item1"
         android:icon="@drawable/stop"
         android:title="NHÓM" />
     <item
         android:id="@+id/item2"
         android:color="#E91E63"
         android:icon="@drawable/forward"
-        android:title="DANH SÁCH">
+        android:title="DANH SÁCH"
+        >
         <!-- "file" submenu -->
         <menu>
             <item
@@ -26,3 +27,4 @@
     </item>
 
 </menu>
+
