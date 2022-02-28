@@ -2,11 +2,13 @@ package book;
 
 public class Book {
     private int resourceId;
-    private String title;
+    private String time, temp, speed;
 
-    public Book(int resourceId, String title) {
+    public Book(int resourceId, String time, String temp, String speed) {
         this.resourceId = resourceId;
-        this.title = title;
+        this.time = time;
+        this.temp = temp;
+        this.speed = speed;
     }
 
     public int getResourceId() {
@@ -17,11 +19,27 @@ public class Book {
         this.resourceId = resourceId;
     }
 
-    public String getTitle() {
-        return title;
+    public String getTime() {
+        return time;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setTime(String time) {
+        this.time = time;
+    }
+
+    public String getTemp() {
+        return temp;
+    }
+
+    public void setTemp(String temp) {
+        this.temp = temp;
+    }
+
+    public String getSpeed() {
+        return speed;
+    }
+
+    public void setSpeed(String speed) {
+        this.speed = speed;
     }
 }

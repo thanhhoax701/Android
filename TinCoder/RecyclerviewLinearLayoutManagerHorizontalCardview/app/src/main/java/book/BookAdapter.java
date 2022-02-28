@@ -38,8 +38,10 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.BookViewHolder
             return;
         }
 
-        holder.imgBook.setImageResource(book.getResourceId());
-        holder.tvTitle.setText(book.getTitle());
+        holder.tvTime.setText(book.getTime());
+        holder.tvTemp.setText(book.getTemp());
+        holder.imgIcon.setImageResource(book.getResourceId());
+        holder.tvSpeed.setText(book.getSpeed());
     }
 
     @Override
@@ -52,15 +54,17 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.BookViewHolder
 
     public class BookViewHolder extends RecyclerView.ViewHolder {
 
-        private ImageView imgBook;
-        private TextView tvTitle;
+        private ImageView imgIcon;
+        private TextView tvTime, tvTemp, tvSpeed;
 
 
         public BookViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            imgBook = (ImageView) itemView.findViewById(R.id.img_book);
-            tvTitle = (TextView) itemView.findViewById(R.id.tv_book);
+            imgIcon = (ImageView) itemView.findViewById(R.id.img_icon);
+            tvTime = (TextView) itemView.findViewById(R.id.tv_time);
+            tvTemp = (TextView) itemView.findViewById(R.id.tv_temp);
+            tvSpeed = (TextView) itemView.findViewById(R.id.tv_speed);
         }
     }
 }

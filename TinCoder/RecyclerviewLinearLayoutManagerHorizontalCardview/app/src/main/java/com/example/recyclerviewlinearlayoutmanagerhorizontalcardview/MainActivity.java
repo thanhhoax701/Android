@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.widget.LinearLayout;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Category hướng vertical
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, RecyclerView.VERTICAL, false);
+
         rcvCategory.setLayoutManager(linearLayoutManager);
 
         categoryAdapter.setData(getListCategory());
@@ -40,24 +42,17 @@ public class MainActivity extends AppCompatActivity {
         List<Category> listCategory = new ArrayList<>();
 
         List<Book> listBook = new ArrayList<>();
-        listBook.add(new Book(R.drawable.bg1, "Book 1"));
-        listBook.add(new Book(R.drawable.bg2, "Book 2"));
-        listBook.add(new Book(R.drawable.bg3, "Book 3"));
-        listBook.add(new Book(R.drawable.bg4, "Book 4"));
+        listBook.add(new Book(R.drawable.may, "Bây giờ", "16°C", "1m/s"));
+        listBook.add(new Book(R.drawable.may, "15:00", "17°C", "2m/s"));
+        listBook.add(new Book(R.drawable.may, "16:00", "18°C", "3m/s"));
+        listBook.add(new Book(R.drawable.may, "17:00", "19°C", "4m/s"));
 
-        listBook.add(new Book(R.drawable.bg1, "Book 5"));
-        listBook.add(new Book(R.drawable.bg2, "Book 6"));
-        listBook.add(new Book(R.drawable.bg3, "Book 7"));
-        listBook.add(new Book(R.drawable.bg4, "Book 8"));
+        listBook.add(new Book(R.drawable.may, "18:00", "20°C", "5m/s"));
+        listBook.add(new Book(R.drawable.may, "19:00", "21°C", "6m/s"));
+        listBook.add(new Book(R.drawable.may, "20:00", "22°C", "7m/s"));
+        listBook.add(new Book(R.drawable.may, "11:00", "23°C", "8m/s"));
 
-        listCategory.add(new Category("Category 1", listBook));
-        listCategory.add(new Category("Category 2", listBook));
-        listCategory.add(new Category("Category 3", listBook));
-        listCategory.add(new Category("Category 4", listBook));
-        listCategory.add(new Category("Category 5", listBook));
-        listCategory.add(new Category("Category 6", listBook));
-        listCategory.add(new Category("Category 7", listBook));
-        listCategory.add(new Category("Category 8", listBook));
+        listCategory.add(new Category("Dự báo theo giờ", listBook));
 
         return listCategory;
     }
