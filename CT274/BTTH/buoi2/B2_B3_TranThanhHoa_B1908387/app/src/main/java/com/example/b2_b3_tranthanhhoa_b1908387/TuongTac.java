@@ -29,8 +29,7 @@ public class TuongTac extends View {
         paint.setColor(Color.WHITE);
         c.drawPaint(paint);
         paint.setColor(Color.BLUE);
-        Bitmap bitmap = BitmapFactory.decodeResource(getResources(),
-                R.drawable.ball);
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.ball);
         c.drawBitmap(bitmap, x, y, paint);
         duongkinh=bitmap.getWidth();
         paint.setTextSize(60);

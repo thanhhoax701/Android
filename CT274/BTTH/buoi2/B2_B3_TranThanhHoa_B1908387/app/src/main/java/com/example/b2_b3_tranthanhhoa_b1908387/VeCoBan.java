@@ -35,10 +35,10 @@ public class VeCoBan extends View {
         // Hiển thị kích thước màn hình
         paint.setColor(Color.BLUE);
         paint.setTextSize(50);
-        String Wcanvas = Integer.toString(xCanvas);
-        canvas.drawText("Chiều rộng của màn hình = "+Wcanvas, 80,160,paint);
-        String Hcanvas = Integer.toString(yCanvas);
-        canvas.drawText("Chiều cao của màn hình = " + Hcanvas, 80, 240,paint);
+        String wCanvas = Integer.toString(xCanvas);
+        canvas.drawText("Chiều rộng của màn hình = "+wCanvas, 80,160,paint);
+        String hCanvas = Integer.toString(yCanvas);
+        canvas.drawText("Chiều cao của màn hình = " + wCanvas, 80, 240,paint);
 
         // Khai báo 1 hình chữ nhật để vẽ cung trong đó
         RectF rectF = new RectF(30, yCanvas/4-40, xCanvas/2-60, yCanvas/2+120);
@@ -47,20 +47,24 @@ public class VeCoBan extends View {
         paint.setColor(Color.RED);
         paint.setStyle(Paint.Style.FILL);
         canvas.drawArc(rectF,-135,90,true,paint); // Vẽ cung
+
         //Vẽ circle
         paint.setColor(Color.RED);
         paint.setStyle(Paint.Style.STROKE);
         paint.setStrokeWidth(10);
         canvas.drawCircle(xCanvas/2+60, yCanvas/4+100, xCanvas/8, paint);
+
         //Vẽ line
         paint.setColor(Color.BLACK);
         paint.setStyle(Paint.Style.STROKE);
         paint.setStrokeWidth(10);
-        canvas.drawLine(xCanvas/2+xCanvas/4, yCanvas/4-40, xCanvas-60, yCanvas/2-120, paint);
+        canvas.drawLine(xCanvas/2+xCanvas/4, yCanvas/4-40, xCanvas-60, yCanvas/2-220, paint);
+
         //Vẽ hình chữ nhật đầy màu
         paint.setColor(Color.BLUE);
         paint.setStyle(Paint.Style.FILL);
         canvas.drawRect(20, yCanvas/4+350, canvas.getWidth()-20,canvas.getHeight()-20, paint);
+
         // Vẽ rotated text "Seahorse"
         paint.setColor(Color.RED);
         canvas.rotate(-45, xCanvas/4, yCanvas/4+450); // Quay canvas -45 độ
@@ -72,10 +76,10 @@ public class VeCoBan extends View {
         //Vẽ image
         Resources res = this.getResources();
         Bitmap bit = BitmapFactory.decodeResource(res,R.drawable.seahorse);
-        float d=bit.getWidth(); //the width of the bitmap
-        float xstar=xCanvas/8; //the coordinates of the left edge of the rectangle
-        float ystar=3*yCanvas/4 ; //the coordinates of the top edge of the rectangle
-        RectF rectF2 = new RectF(xstar,ystar, xstar+d,ystar+d); //defined rectangle
+        float d = bit.getWidth(); //the width of the bitmap
+        float xStar = xCanvas/8; //the coordinates of the left edge of the rectangle
+        float yStar = 3*yCanvas/4 ; //the coordinates of the top edge of the rectangle
+        RectF rectF2 = new RectF(xStar,yStar, xStar+d,yStar+d); //defined rectangle
         canvas.drawBitmap(bit,null,rectF2,paint);
     }
 }
