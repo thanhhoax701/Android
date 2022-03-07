@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity3">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#deb887"
+        android:text="Nhập tên:" />
+
+    <EditText
+        android:id="@+id/txtTen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:ems="10"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/btnNhap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:text="Nhập"
+        android:textAlignment="center"
+        tools:ignore="RtlCompat" />
+
+    <TextView
+        android:id="@+id/txtselection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#007380" />
+
+    <ListView
+        android:id="@+id/lvperson"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#cccccc" />
+
+</LinearLayout>

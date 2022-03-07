@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="myarray">
+        <item >Trần Văn Thành</item>
+        <item >Nguyễn Thị Phố</item>
+        <item >Hồ Văn Cần</item>
+        <item >Lê Văn Thơ</item>
+        <item >Lê Văn Sáng</item>
+        <item >Lâm Văn Xanh</item>
+        <item >Trần Thị Sạch</item>
+        <item >Hứa Thị Đẹp</item>
+    </string-array>
+</resources>
