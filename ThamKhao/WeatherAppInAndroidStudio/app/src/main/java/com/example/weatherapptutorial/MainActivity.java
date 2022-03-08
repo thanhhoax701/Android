@@ -122,10 +122,6 @@ public class MainActivity extends AppCompatActivity {
                 params.put("lon",Longitude);
                 params.put("appid",APP_ID);
                 letsdoSomeNetworking(params);
-
-
-
-
             }
 
             @Override
@@ -197,14 +193,13 @@ public class MainActivity extends AppCompatActivity {
                 weatherData weatherD=weatherData.fromJson(response);
                 updateUI(weatherD);
 
-
-               // super.onSuccess(statusCode, headers, response);
+                super.onSuccess(statusCode, headers, response);
             }
 
 
             @Override
             public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
-                //super.onFailure(statusCode, headers, throwable, errorResponse);
+                super.onFailure(statusCode, headers, throwable, errorResponse);
             }
         });
 
