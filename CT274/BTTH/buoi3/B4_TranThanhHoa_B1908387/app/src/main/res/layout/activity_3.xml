@@ -27,18 +27,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
-        android:text="Nhập"
-        android:textAlignment="center"
-        tools:ignore="RtlCompat" />
+        android:text="Nhập" />
 
     <TextView
-        android:id="@+id/txtselection"
+        android:id="@+id/txtSelection"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#007380" />
 
     <ListView
-        android:id="@+id/lvperson"
+        android:id="@+id/lvPerson"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#cccccc" />

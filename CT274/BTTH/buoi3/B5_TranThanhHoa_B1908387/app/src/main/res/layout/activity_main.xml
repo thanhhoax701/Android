@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="#aaaaff"
+        android:gravity="center_horizontal"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:text="Activity 1 - Send value"
+        android:textColor="#ff1b2a"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:typeface="normal"/>
+
+    <EditText
+        android:id="@+id/value_edit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="#aaffaa"
+        android:gravity="center"
+        android:hint="Nhập vào một số"
+        android:inputType="numberDecimal"
+        android:lines="1"
+        android:textSize="25sp"
+        android:textColor="#f00"/>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <Button
+            android:id="@+id/send_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="Send to Activity 2"
+            android:textColor="#0000ff"
+            android:textSize="30sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

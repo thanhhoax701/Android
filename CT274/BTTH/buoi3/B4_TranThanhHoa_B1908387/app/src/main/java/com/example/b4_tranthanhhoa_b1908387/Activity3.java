@@ -2,6 +2,7 @@ package com.example.b4_tranthanhhoa_b1908387;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -15,57 +16,64 @@ import java.util.ArrayList;
 
 public class Activity3 extends AppCompatActivity {
 
-    EditText txtten;
-    TextView txtchon;
-    Button btn;
-    ListView lv;
-    ArrayList<String> arrList=null;
-    ArrayAdapter<String> adapter=null;
+    EditText txtTen;
+    TextView txtChon;
+    Button btn3;
+    ListView lv3;
+    ArrayList<String> arrayList = null;
+    ArrayAdapter<String> arrayAdapter = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_3);
+        txtTen=(EditText) findViewById(R.id.txtTen);
+        txtChon=(TextView) findViewById(R.id.txtSelection);
 
-        lv=(ListView) findViewById(R.id.lvperson);
+        lv3 = (ListView) findViewById(R.id.lvPerson);
         //1. Tạo ArrayList object
-        arrList=new ArrayList<String>();
+        arrayList = new ArrayList<String>();
 
         //2. Gán Data Source (ArrayList object) vào ArrayAdapter
-        adapter=new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, arrList);
+        arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, arrayList);
 
         //3. gán Adapter vào ListView
-        lv.setAdapter(adapter);
-        btn=(Button) findViewById(R.id.btnNhap);
+        lv3.setAdapter(arrayAdapter);
+        btn3 = (Button) findViewById(R.id.btnNhap);
 
         //4. Xử lý sự kiện nhấn nút Nhập
-        btn.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View arg0) {
-                arrList.add(txtten.getText()+"");
-                adapter.notifyDataSetChanged();
+        btn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                arrayList.add(txtTen.getText()+"");
+                arrayAdapter.notifyDataSetChanged();
             }
         });
 
         //5. Xử lý sự kiện chọn một phần tử trong ListView
-        lv.setOnItemClickListener(new AdapterView
-                .OnItemClickListener() {
-            public void onItemClick(
-                    AdapterView<?> arg0,View arg1,
-                    int arg2,long arg3) {
-                txtchon.setText("position : " + arg2 + "; value =" + arrList.get(arg2));
+        lv3.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> arg0,View arg1, int arg2,long arg3) {
+                txtChon.setText("position : " + arg2 + "; value =" + arrayList.get(arg2));
             }
         });
         
         //6. xử lý sự kiện Long click
-        lv.setOnItemLongClickListener(new AdapterView
-                .OnItemLongClickListener() {
+        lv3.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
-                arrList.remove(arg2);//xóa phần tử thứ arg2
-                adapter.notifyDataSetChanged();
+                arrayList.remove(arg2);//xóa phần tử thứ arg2
+                arrayAdapter.notifyDataSetChanged();
                 return false;
             }
         });
 
+//        lv3.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+//            @Override
+//            public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
+//                arrayList.remove(i);//xóa phần tử thứ arg2
+//                arrayAdapter.notifyDataSetChanged();
+//                return false;
+//            }
+//        });
     }
 }

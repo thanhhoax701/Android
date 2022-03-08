@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter an url"
+        android:textColor="#0000ff"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/nhapUrl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="http://www.amazon.com" />
+
+    <Button
+        android:id="@+id/btn_webBrowser"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickWebBrowser"
+        android:text="Web Browser" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter a phone number"
+        android:textColor="#0000ff"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/nhapNumberPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="5556"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/btn_makeCalls"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickMakeCalls"
+        android:text="Make Calls" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter meridian and latitude"
+        android:textColor="#0000ff"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/nhapLatLon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="37.827500,-122.481670" />
+
+    <Button
+        android:id="@+id/btn_showMap"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickShowMap"
+        android:text="Show Map" />
+
+</LinearLayout>
