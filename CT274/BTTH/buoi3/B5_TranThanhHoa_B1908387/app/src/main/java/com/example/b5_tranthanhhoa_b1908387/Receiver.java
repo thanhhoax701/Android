@@ -9,10 +9,7 @@ public class Receiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         long value = intent.getLongExtra("new value", -10) + 10;
-        Toast toast = Toast.makeText(context, "Broadcast Receiver catch an Intent"
-                + " \n" + "The value is stored in the Intent is "
-                + String.valueOf(value), Toast.LENGTH_LONG);
+        Toast toast = Toast.makeText(context, "Broadcast Receiver catch an Intent" + " \n" + "The value is stored in the Intent is " + String.valueOf(value), Toast.LENGTH_LONG);
         toast.show();
     }
-
 }
