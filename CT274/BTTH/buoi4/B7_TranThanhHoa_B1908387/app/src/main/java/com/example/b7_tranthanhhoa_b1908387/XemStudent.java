@@ -34,7 +34,8 @@ public class XemStudent extends AppCompatActivity {
                     String tx="id: " + cc.getString(0) + "\n" +
                             "MSSV: " + cc.getString(1) + "\n" +
                             "Name: " + cc.getString(2) + "\n" +
-                            "Email: " + cc.getString(3);
+                            "Email: " + cc.getString(3) + "\n" +
+                            "Phone number: " + cc.getString(4);
                     ct.setText(tx);
                 }
                 else {

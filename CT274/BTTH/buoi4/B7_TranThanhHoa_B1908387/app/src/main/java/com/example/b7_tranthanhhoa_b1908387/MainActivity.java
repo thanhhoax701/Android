@@ -60,7 +60,8 @@ public class MainActivity extends AppCompatActivity {
                         String msg = "id: " + c.getString(0) + "\n" +
                                 "MSSV: " + c.getString(1) + "\n" +
                                 "Name: " + c.getString(2) + "\n" +
-                                "Email: " + c.getString(3);
+                                "Email: " + c.getString(3) + "\n" +
+                                "Phone number: " + c.getString(4);
                         arrList.add(msg);
                         adapter.notifyDataSetChanged();
                         c.moveToNext();
