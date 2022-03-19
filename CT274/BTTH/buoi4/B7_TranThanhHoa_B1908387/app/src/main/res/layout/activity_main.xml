@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txtthemsv"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#bbbbff"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="CSDL QUẢN LÝ SINH VIÊN DÙNG SQLITE"
+        android:textAllCaps="true"
+        android:textColor="#ff0000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnthemsv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#bbffbb"
+        android:textSize="18sp"
+        android:text="Thêm student" />
+
+    <Button
+        android:id="@+id/btnxemtatca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffff00"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:text="Xem tất cả student" />
+
+    <Button
+        android:id="@+id/btnxemmotsv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="#ffaa66"
+        android:textSize="18sp"
+        android:text="Xem một student" />
+
+    <Button
+        android:id="@+id/btncapnhatsv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="#ddddff"
+        android:textSize="18sp"
+        android:text="Sửa một student" />
+
+    <Button
+        android:id="@+id/btnxoasv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="#ff99ff"
+        android:textSize="18sp"
+        android:text="Xóa một student" />
+
+    <Button
+        android:id="@+id/btntrove"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="#ADABAD"
+        android:textSize="18sp"
+        android:text="TRỞ VỀ MÀN HÌNH CHÍNH" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/dhcantho" />
+
+        <ListView
+            android:id="@+id/lvperson"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#cccccc">
+        </ListView>
+
+    </FrameLayout>
+
+</LinearLayout>
