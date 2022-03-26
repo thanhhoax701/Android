@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "572388402794",
+    "project_id": "demodatabase-f7c71",
+    "storage_bucket": "demodatabase-f7c71.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:572388402794:android:14a168d3d9aa44313dcc13",
+        "android_client_info": {
+          "package_name": "com.example.newfirebasedatabase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "572388402794-k00mh2h4dqujef5e2jm4ob3i2qlo2cu0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtiyR7vXzpupnWurfn7sq7FP16icmAzn0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "572388402794-k00mh2h4dqujef5e2jm4ob3i2qlo2cu0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

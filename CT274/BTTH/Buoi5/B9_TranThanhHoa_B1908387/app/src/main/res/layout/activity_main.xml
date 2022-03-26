@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#6F6F73"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="TRUY VẤN CONTENT PROVIDER"
+        android:textAllCaps="true"
+        android:textColor="#0A20AE"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp"/>
+
+    <Button
+        android:id="@+id/btnContact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="#94ADE1"
+        android:textColor="#03146E"
+        android:textSize="18sp"
+        android:text="XEM TẤT CẢ LIÊN LẠC"
+        android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:id="@+id/btnCall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="#94ADE1"
+        android:textColor="#03146E"
+        android:textSize="18sp"
+        android:text="XEM LỊCH SỬ CUỘC GỌI"
+        android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:id="@+id/btnMedia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="#94ADE1"
+        android:textColor="#03146E"
+        android:textSize="18sp"
+        android:text="XEM DANH SÁCH MEDIA"
+        android:layout_marginBottom="10dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/tren_song"
+        android:layout_gravity="center"/>
+
+</LinearLayout>

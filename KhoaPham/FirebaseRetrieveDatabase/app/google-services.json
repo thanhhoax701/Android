@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "312831249254",
+    "project_id": "demoretrievedatabase",
+    "storage_bucket": "demoretrievedatabase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:312831249254:android:a166739404a900140216a7",
+        "android_client_info": {
+          "package_name": "com.example.firebaseretrievedatabase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "312831249254-kj9n3ag20v2jvdhgik6b1m7nqu6bf3h2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBy5J9zzwHJzIweqKKdoyqOuqOkYYWqOts"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "312831249254-kj9n3ag20v2jvdhgik6b1m7nqu6bf3h2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
