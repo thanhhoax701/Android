@@ -18,27 +18,27 @@ public class XemStudent extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_xem_student);
 
-        final EditText so = (EditText) this.findViewById(R.id.stt);
-        final TextView ct = (TextView) this.findViewById(R.id.hienthi);
-        Button xemsv = (Button) this.findViewById(R.id.btnxemmot);
-        Button trove = (Button) this.findViewById(R.id.btntrove);
+        final EditText so=(EditText)this.findViewById(R.id.stt);
+        final TextView ct=(TextView)this.findViewById(R.id.hienthi);
+        Button xemsv=(Button)this.findViewById(R.id.btnxemmot);
+        Button trove=(Button)this.findViewById(R.id.btntrove);
 
-        xemsv.setOnClickListener(new View.OnClickListener() {
+        xemsv.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
                 //TODO Auto-generated mehtod stub
                 db.open();
-                int chiso = Integer.parseInt(so.getText().toString());
+                int chiso=Integer.parseInt(so.getText().toString());
                 Cursor cc = db.getStudent(chiso);
                 //Có thêm
                 if (cc.moveToFirst()) {
-                    String tx = "id: " + cc.getString(0) + "\n" +
+                    String tx="id: " + cc.getString(0) + "\n" +
                             "MSSV: " + cc.getString(1) + "\n" +
                             "Name: " + cc.getString(2) + "\n" +
                             "Email: " + cc.getString(3);
-//                            "Phone number: " + cc.getString(4);
                     ct.setText(tx);
-                } else {
-                    String tx2 = "No student found";
+                }
+                else {
+                    String tx2="No student found";
                     ct.setText(tx2);
                     db.close();
                 }
@@ -47,7 +47,7 @@ public class XemStudent extends AppCompatActivity {
         trove.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(XemStudent.this, MainActivity.class);
+                Intent intent=new Intent(XemStudent.this,MainActivity.class);
                 startActivity(intent);
             }
         });

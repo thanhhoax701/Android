@@ -15,9 +15,9 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
     DBAdapter db = new DBAdapter(this);
     ListView lv;
-    ArrayList<String> arrList = null;
-    ArrayAdapter<String> adapter = null;
-//    String msg;
+    ArrayList<String> arrList=null;
+    ArrayAdapter<String> adapter=null;
+    String msg;
 
 
     @Override
@@ -42,11 +42,11 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //---get all sinh viêns---
-        lv = (ListView) findViewById(R.id.lvperson);
+        lv=(ListView) findViewById(R.id.lvperson);
         //Tạo ArrayList object
-        arrList = new ArrayList<String>();
+        arrList=new ArrayList<String>();
         //Gán Data Source (ArrayList object) vào ArrayAdapter
-        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, arrList);
+        adapter=new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,arrList);
         //gán Adapter vào ListView
         lv.setAdapter(adapter);
         xemtatcasv.setOnClickListener(new View.OnClickListener() {
@@ -60,14 +60,13 @@ public class MainActivity extends AppCompatActivity {
                         String msg = "id: " + c.getString(0) + "\n" +
                                 "MSSV: " + c.getString(1) + "\n" +
                                 "Name: " + c.getString(2) + "\n" +
-                                "Email: " + c.getString(3) + "\n" +
-                                "Phone number: " + c.getString(4);
+                                "Email: " + c.getString(3);
                         arrList.add(msg);
                         adapter.notifyDataSetChanged();
                         c.moveToNext();
                     }
                     //while (c.moveToNext());
-                    while (c.isAfterLast() == false);
+                    while (c.isAfterLast()==false);
                 }
                 db.close();
             }
