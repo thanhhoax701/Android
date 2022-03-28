@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/txtthemsv"
@@ -24,8 +24,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#bbffbb"
-        android:textSize="18sp"
-        android:text="Thêm student" />
+        android:text="Thêm student"
+        android:textSize="18sp" />
 
     <Button
         android:id="@+id/btnxemtatca"
@@ -33,44 +33,44 @@
         android:layout_height="wrap_content"
         android:background="#ffff00"
         android:gravity="center"
-        android:textSize="18sp"
-        android:text="Xem tất cả student" />
+        android:text="Xem tất cả student"
+        android:textSize="18sp" />
 
     <Button
         android:id="@+id/btnxemmotsv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:background="#ffaa66"
-        android:textSize="18sp"
-        android:text="Xem một student" />
+        android:gravity="center"
+        android:text="Xem một student"
+        android:textSize="18sp" />
 
     <Button
         android:id="@+id/btncapnhatsv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:background="#ddddff"
-        android:textSize="18sp"
-        android:text="Sửa một student" />
+        android:gravity="center"
+        android:text="Sửa một student"
+        android:textSize="18sp" />
 
     <Button
         android:id="@+id/btnxoasv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:background="#ff99ff"
-        android:textSize="18sp"
-        android:text="Xóa một student" />
+        android:gravity="center"
+        android:text="Xóa một student"
+        android:textSize="18sp" />
 
     <Button
         android:id="@+id/btntrove"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:background="#ADABAD"
-        android:textSize="18sp"
-        android:text="TRỞ VỀ MÀN HÌNH CHÍNH" />
+        android:gravity="center"
+        android:text="TRỞ VỀ MÀN HÌNH CHÍNH"
+        android:textSize="18sp" />
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -85,8 +85,7 @@
             android:id="@+id/lvperson"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#cccccc">
-        </ListView>
+            android:background="#cccccc"></ListView>
 
     </FrameLayout>
 
