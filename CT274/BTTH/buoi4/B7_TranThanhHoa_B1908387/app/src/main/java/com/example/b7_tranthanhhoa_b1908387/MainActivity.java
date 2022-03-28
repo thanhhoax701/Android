@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -60,13 +61,17 @@ public class MainActivity extends AppCompatActivity {
                         String msg = "id: " + c.getString(0) + "\n" +
                                 "MSSV: " + c.getString(1) + "\n" +
                                 "Name: " + c.getString(2) + "\n" +
-                                "Email: " + c.getString(3);
+                                "Email: " + c.getString(3) + "\n" +
+                                "Phone number: " +c.getString(4);;
                         arrList.add(msg);
                         adapter.notifyDataSetChanged();
                         c.moveToNext();
                     }
                     //while (c.moveToNext());
                     while (c.isAfterLast()==false);
+                }
+                else {
+                    Toast.makeText(MainActivity.this, "Vui lòng thêm sinh viên!!!", Toast.LENGTH_SHORT).show();
                 }
                 db.close();
             }

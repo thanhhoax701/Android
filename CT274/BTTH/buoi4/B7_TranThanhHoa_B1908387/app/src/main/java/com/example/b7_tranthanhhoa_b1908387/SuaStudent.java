@@ -22,8 +22,9 @@ public class SuaStudent extends AppCompatActivity {
         final EditText masosv=(EditText)this.findViewById(R.id.mssv);//Thêm
         final EditText ten=(EditText)this.findViewById(R.id.hoten);
         final EditText email=(EditText)this.findViewById(R.id.email);
-//        final EditText sodienthoai = (EditText) this.findViewById(R.id.phone);
-        final TextView ct=(TextView)this.findViewById(R.id.studentduocthem);
+        final EditText sodienthoai = (EditText) this.findViewById(R.id.phone);
+        TextView kq = findViewById(R.id.kq);
+        final TextView ct=(TextView)this.findViewById(R.id.hienthi);
         Button suacontact=(Button)this.findViewById(R.id.btnsua);
         Button trove=(Button)this.findViewById(R.id.btntrove);
 
@@ -33,9 +34,10 @@ public class SuaStudent extends AppCompatActivity {
                 String masosinhvien=masosv.getText().toString();
                 String tensv=ten.getText().toString();
                 String e_mail=email.getText().toString();
+                String sdt_string = sodienthoai.getText().toString();
                 int chiso=Integer.parseInt(sott.getText().toString());
                 //---update contact---
-                if (db.updateStudent(chiso,masosinhvien, tensv,e_mail))
+                if (db.updateStudent(chiso,masosinhvien, tensv,e_mail, sdt_string))
                     ct.setText("thành công.");
                 else
                     ct.setText("không thành công, đây là giá trị cũ, vui lòng thực hiện lại lần nữa");
@@ -45,7 +47,8 @@ public class SuaStudent extends AppCompatActivity {
                 String tx="id: " + c.getString(0) + "\n" +
                         "MSSV: " + c.getString(1) + "\n" +
                         "Name: " + c.getString(2) + "\n" +
-                        "Email: " + c.getString(3);
+                        "Email: " + c.getString(3)+ "\n" +
+                        "Phone number: " +c.getString(4);
                 ct.setText(tx);
                 db.close();
             }
