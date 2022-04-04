@@ -141,8 +141,7 @@ public class PieChartsActivity extends AppCompatActivity {
 //        arrayList.add(8);
 //        arrayList.add(9);
         //Đưa spinner vào ArrayAdapter
-        ArrayAdapter arrayAdapter = new ArrayAdapter(this,
-                android.R.layout.simple_spinner_item, arrayList);
+        ArrayAdapter arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item, arrayList);
 
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_list_item_single_choice);
         spinner.setAdapter(arrayAdapter);
@@ -158,7 +157,7 @@ public class PieChartsActivity extends AppCompatActivity {
         //tạo đường tròn ở trong
         pieChartMp.setDrawHoleEnabled(true);
         pieChartMp.setHoleColor(Color.WHITE);
-        //tạo đường viền bên trong hìnht tròn
+        //tạo đường viền bên trong hình tròn
         pieChartMp.setTransparentCircleColor(Color.WHITE);
         pieChartMp.setTransparentCircleAlpha(110);
         pieChartMp.setCenterTextColor(Color.BLACK);
@@ -197,7 +196,7 @@ public class PieChartsActivity extends AppCompatActivity {
                         String edtphantram22 = df.format(in22);
                         tv1.setText(edtphantram12);
                         tv2.setText(edtphantram22);
-//tổng số liệu nhập vào
+                        //tổng số liệu nhập vào
                         double tong = amount1 + amount2;
                         String togAmount = Double.toString(tong);
                         tvTotal.setText(togAmount);
@@ -219,6 +218,9 @@ public class PieChartsActivity extends AppCompatActivity {
                         startActivity(intent2);
                         break;
                     case 3:
+                        Des1 = edtDes1.getText().toString();
+                        Des2 = edtDes2.getText().toString();
+                        Des3 = edtDes3.getText().toString();
                         //lấy title
                         String lay3 = edttitle.getText().toString();
                         tvtlaytitle.setText("Đồ thị:" + lay3);
@@ -227,25 +229,44 @@ public class PieChartsActivity extends AppCompatActivity {
                         amount2 = Double.parseDouble(edtso2.getText().toString());
                         amount3 = Double.parseDouble(edtso3.getText().toString());
                         //tính số phần trăm từng phần
-                        DecimalFormat df3 = new DecimalFormat("0.0");// làm tròn với 3 chữsố thập phân, muốn bao nhiêu chữ số sau dấu phẩy //thì thêm bấy nhiêu số 0.
-                        tong3pt = amount1 + amount2 + amount3;
-                        double in13 = ((amount1 / tong3pt) * 100);
-                        double in23 = ((amount2 / tong3pt) * 100);
-                        double in33 = ((amount3 / tong3pt) * 100);
-                        String edtphantram13 = df3.format(in13);
-                        String edtphantram23 = df3.format(in23);
-                        String edtphantram33 = df3.format(in33);
-                        tv1.setText(edtphantram13);
-                        tv2.setText(edtphantram23);
-                        tv3.setText(edtphantram33);
+//                        DecimalFormat df3 = new DecimalFormat("0.0");// làm tròn với 3 chữ số thập phân, muốn bao nhiêu chữ số sau dấu phẩy //thì thêm bấy nhiêu số 0.
+//                        tong3pt = amount1 + amount2 + amount3;
+//                        double in13 = ((amount1 / tong3pt) * 100);
+//                        double in23 = ((amount2 / tong3pt) * 100);
+//                        double in33 = ((amount3 / tong3pt) * 100);
+//                        String edtphantram13 = df3.format(in13);
+//                        String edtphantram23 = df3.format(in23);
+//                        String edtphantram33 = df3.format(in33);
+//                        tv1.setText(edtphantram13);
+//                        tv2.setText(edtphantram23);
+//                        tv3.setText(edtphantram33);
+//                        //tổng số liệu nhập vào
+//                        double tong3 = amount1 + amount2 + amount3;
+//                        String togAmount3 = Double.toString(tong3);
+//                        tvTotal.setText(togAmount3);
+//                        //tổng số phần trăm
+//                        double tong23 = in13 + in23 + in33;
+//                        String tongpt3 = df3.format(tong23);
+//                        tvTotalPt.setText(tongpt3);
+                        DecimalFormat df33 = new DecimalFormat("0.0");
+                        double tong3pt3 = amount1 + amount2 + amount3;
+                        double in133 = ((amount1 / tong3pt3) * 100);
+                        double in233 = ((amount2 / tong3pt3) * 100);
+                        double in333 = ((amount3 / tong3pt3) * 100);
+                        String edtphantram133 = df33.format(in133);
+                        String edtphantram233 = df33.format(in233);
+                        String edtphantram333 = df33.format(in333);
+                        tv1.setText(edtphantram133);
+                        tv2.setText(edtphantram233);
+                        tv3.setText(edtphantram333);
                         //tổng số liệu nhập vào
-                        double tong3 = amount1 + amount2 + amount3;
-                        String togAmount3 = Double.toString(tong3);
-                        tvTotal.setText(togAmount3);
+                        double tong33 = amount1 + amount2 + amount3;
+                        String togAmount33 = df33.format(tong33);
+                        tvTotal.setText(togAmount33);
                         //tổng số phần trăm
-                        double tong23 = in13 + in23 + in33;
-                        String tongpt3 = df3.format(tong23);
-                        tvTotalPt.setText(tongpt3);
+                        double tong233 = in133 + in233 + in333;
+                        String tongpt33 = df33.format(tong233);
+                        tvTotalPt.setText(tongpt33);
                         //tạo setData
                         setData3(3, 100);
                         pieChartMp.setData(data3);
@@ -271,7 +292,7 @@ public class PieChartsActivity extends AppCompatActivity {
                         amount3 = Double.parseDouble(edtso3.getText().toString());
                         amount4 = Double.parseDouble(edtso4.getText().toString());
                         //tính số phần trăm từng phần
-                        DecimalFormat df34 = new DecimalFormat("0.0");// làm tròn với 3 chữsố thập phân, muốn bao nhiêu chữ số sau dấu phẩy //thì thêm bấy nhiêu số 0.
+                        DecimalFormat df34 = new DecimalFormat("0.0");// làm tròn với 3 chữ số thập phân, muốn bao nhiêu chữ số sau dấu phẩy //thì thêm bấy nhiêu số 0.
                         double tong3pt4 = amount1 + amount2 + amount3 + amount4;
                         double in134 = ((amount1 / tong3pt4) * 100);
                         double in234 = ((amount2 / tong3pt4) * 100);
@@ -318,8 +339,8 @@ public class PieChartsActivity extends AppCompatActivity {
         btnsave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                pieChartMp.saveToPath("Hinh Pie2","");
-                Toast.makeText(PieChartsActivity.this,"Lưu hình ảnh pie thành công",Toast.LENGTH_LONG).show();
+                pieChartMp.saveToPath("Hinh Pie2", "");
+                Toast.makeText(PieChartsActivity.this, "Lưu hình ảnh pie thành công", Toast.LENGTH_LONG).show();
             }
         });
 
@@ -343,19 +364,19 @@ public class PieChartsActivity extends AppCompatActivity {
     //Các class và method ngoài onCreate
     private void setData2(int count, float range) {
         //Des3=edtDes3.getText().toString();
-        String[] mParties = new String[] {Des1,Des2};
+        String[] mParties = new String[]{Des1, Des2};
         float mult = range;
         ArrayList<PieEntry> yEntrys = new ArrayList<>();
         // ArrayList<PieEntry> entries = new ArrayList<PieEntry>();
         // NOTE: The order of the entries when being added to the entries array determinestheir position around the center of
         // the chart.
-        double tong2=amount1+amount2;
-        double[] yData2={amount1,amount2};
+        double tong2 = amount1 + amount2;
+        double[] yData2 = {amount1, amount2};
         for (int i = 0; i < count; i++) {
-            yEntrys .add(new PieEntry((float) (yData2[i]/tong2)*100,
+            yEntrys.add(new PieEntry((float) (yData2[i] / tong2) * 100,
                     mParties[i % mParties.length]));
         }
-        PieDataSet dataSet = new PieDataSet(yEntrys,null);
+        PieDataSet dataSet = new PieDataSet(yEntrys, null);
         dataSet.setSliceSpace(3f);
         //dataSet.setIconsOffset(new MPPointF(0, 40)); xem lại
         dataSet.setSelectionShift(5f);
@@ -384,20 +405,20 @@ public class PieChartsActivity extends AppCompatActivity {
     }
 
     private void setData3(int count, float range) {
-        Des1=edtDes1.getText().toString();
-        Des2=edtDes2.getText().toString();
-        Des3=edtDes3.getText().toString();
-        String[] mParties = new String[] {Des1,Des2,Des3};
+        Des1 = edtDes1.getText().toString();
+        Des2 = edtDes2.getText().toString();
+        Des3 = edtDes3.getText().toString();
+        String[] mParties = new String[]{Des1, Des2, Des3};
         float mult = range;
         ArrayList<PieEntry> yEntrys = new ArrayList<>();
-        tong3= amount1+amount2+amount3;
-        double[] yData3={amount1,amount2,amount3};
+        tong3 = amount1 + amount2 + amount3;
+        double[] yData3 = {amount1, amount2, amount3};
         for (int i = 0; i < count; i++) {
             // yEntrys.add(new PieEntry((float)()
-            yEntrys .add(new PieEntry((float) (yData3[i]/tong3)*100,
+            yEntrys.add(new PieEntry((float) (yData3[i] / tong3) * 100,
                     mParties[i % mParties.length]));
         }
-        PieDataSet dataSet = new PieDataSet(yEntrys,null);
+        PieDataSet dataSet = new PieDataSet(yEntrys, null);
         dataSet.setSliceSpace(3f);
         dataSet.setIconsOffset(new MPPointF(0, 40));
         dataSet.setSelectionShift(5f);
@@ -428,22 +449,22 @@ public class PieChartsActivity extends AppCompatActivity {
     }
 
     private void setData4(int count, float range) {
-        Des1=edtDes1.getText().toString();
-        Des2=edtDes2.getText().toString();
-        Des3=edtDes3.getText().toString();
-        Des4=edtDes4.getText().toString();
-        String[] mParties = new String[] {Des1,Des2,Des3,Des4};
+        Des1 = edtDes1.getText().toString();
+        Des2 = edtDes2.getText().toString();
+        Des3 = edtDes3.getText().toString();
+        Des4 = edtDes4.getText().toString();
+        String[] mParties = new String[]{Des1, Des2, Des3, Des4};
         float mult = range;
         ArrayList<PieEntry> yEntrys = new ArrayList<>();
         // NOTE: The order of the entries when being added to the entries array determinestheir position
         // around the center of the chart.
-        double tong4=amount1+amount2+amount3+amount4;
-        double[] yData4={amount1,amount2,amount3,amount4};
+        double tong4 = amount1 + amount2 + amount3 + amount4;
+        double[] yData4 = {amount1, amount2, amount3, amount4};
         for (int i = 0; i < count; i++) {
-            yEntrys .add(new PieEntry((float) (yData4[i]/tong4)*100,
+            yEntrys.add(new PieEntry((float) (yData4[i] / tong4) * 100,
                     mParties[i % mParties.length]));
         }
-        PieDataSet dataSet = new PieDataSet(yEntrys,null);
+        PieDataSet dataSet = new PieDataSet(yEntrys, null);
         dataSet.setSliceSpace(3f);
         dataSet.setIconsOffset(new MPPointF(0, 40));
         dataSet.setSelectionShift(5f);
@@ -478,6 +499,7 @@ public class PieChartsActivity extends AppCompatActivity {
                 s.length(), 0);
         return s;
     }
+
     //
     class MpAndroidChart implements
             AdapterView.OnItemSelectedListener {
@@ -501,13 +523,13 @@ public class PieChartsActivity extends AppCompatActivity {
 //                    tableRow7.setVisibility(View.INVISIBLE);
 //                    tableRow8.setVisibility(View.INVISIBLE);
 //                    tableRow9.setVisibility(View.INVISIBLE);
-                    Toast.makeText(PieChartsActivity.this,"Xin vui lòng chọn số phần tử từ 2 đến 9",Toast.LENGTH_LONG).show();
+                    Toast.makeText(PieChartsActivity.this, "Xin vui lòng chọn số phần tử từ 2 đến 4", Toast.LENGTH_LONG).show();
                     break;
                 case 1:
                     pieChartMp.setVisibility(View.INVISIBLE);
                     tvTotal.setText("0");
                     tvTotalPt.setText("0");
-                    Toast.makeText(PieChartsActivity.this,"Xin vui lòng chọn số phần tử từ 2 đến 9",Toast.LENGTH_LONG).show();
+                    Toast.makeText(PieChartsActivity.this, "Xin vui lòng chọn số phần tử từ 2 đến 4", Toast.LENGTH_LONG).show();
                     tableRow1.setVisibility(View.INVISIBLE);
                     tableRow2.setVisibility(View.INVISIBLE);
                     tableRow3.setVisibility(View.INVISIBLE);
@@ -553,6 +575,7 @@ public class PieChartsActivity extends AppCompatActivity {
                     break;
             }
         }
+
         //Nếu không chọn gì cả
         public void onNothingSelected(AdapterView<?> arg0) {
             //selection.setText("");

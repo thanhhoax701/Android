@@ -31,7 +31,7 @@ public class pieChart4 extends AppCompatActivity {
     double amount1, amount2, amount3, amount4;
     TextView textView;
     PieChart pieChartpie;
-    PieData data2;
+    PieData data4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +46,7 @@ public class pieChart4 extends AppCompatActivity {
                 finish();
             }
         });
+
         textView = (TextView) findViewById(R.id.laytitle);
         Intent intent = getIntent();
         amount1 = intent.getDoubleExtra("segment1", 123);
@@ -75,7 +76,7 @@ public class pieChart4 extends AppCompatActivity {
         pieChartpie.setDrawCenterText(true);
 //
         setData4(4, 100);
-        pieChartpie.setData(data2);
+        pieChartpie.setData(data4);
         pieChartpie.setVisibility(View.VISIBLE);
     }
 
@@ -107,9 +108,9 @@ public class pieChart4 extends AppCompatActivity {
         colors.add(ColorTemplate.getHoloBlue());
         dataSet.setColors(colors);
         dataSet.setYValuePosition(PieDataSet.ValuePosition.OUTSIDE_SLICE);
-        data2 = new PieData(dataSet);
-        data2.setValueFormatter(new PercentFormatter());//thêm sô phân trăm
-        data2.setValueTextSize(13f); //kích thước số liệu
+        data4 = new PieData(dataSet);
+        data4.setValueFormatter(new PercentFormatter());//thêm số phần trăm
+        data4.setValueTextSize(13f); //kích thước số liệu
         pieChartpie.invalidate();
         Legend l = pieChartpie.getLegend();
         l.setVerticalAlignment(Legend.LegendVerticalAlignment.TOP);

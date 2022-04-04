@@ -80,6 +80,7 @@ public class BarChartsActivity extends AppCompatActivity {
         edttitle = (EditText) findViewById(R.id.edtTitle);
         tvTotal = (TextView) findViewById(R.id.tvTotal1);
         tvTotalPt = (TextView) findViewById(R.id.tvTotal2);
+
         edtso1 = (EditText) findViewById(R.id.edtAmount1);
         edtso2 = (EditText) findViewById(R.id.edtAmount2);
         edtso3 = (EditText) findViewById(R.id.edtAmount3);
@@ -111,6 +112,7 @@ public class BarChartsActivity extends AppCompatActivity {
 //        tv9 = (TextView) findViewById(R.id.tvphantram9);
 
         tvtlaytitle = (TextView) findViewById(R.id.laytitle);
+
         tableRow1 = (TableRow) findViewById(R.id.tableRow1);
         tableRow2 = (TableRow) findViewById(R.id.tableRow2);
         tableRow3 = (TableRow) findViewById(R.id.tableRow3);
@@ -120,6 +122,7 @@ public class BarChartsActivity extends AppCompatActivity {
 //        tableRow7 = (TableRow) findViewById(R.id.tableRow7);
 //        tableRow8 = (TableRow) findViewById(R.id.tableRow8);
 //        tableRow9 = (TableRow) findViewById(R.id.tableRow9);
+
         tableLayout = (TableLayout) findViewById(R.id.tableLayout);
         tableLayout = (TableLayout) findViewById(R.id.tableLayout);
         btnVeBar = (Button) findViewById(R.id.btnVeBarCharts);
@@ -324,131 +327,131 @@ public class BarChartsActivity extends AppCompatActivity {
     }
 
     //Các class và method ngoài onCreate
-    private void setData2(int count, float range) {
-        //Des3=edtDes3.getText().toString();
-        String[] mParties = new String[]{Des1, Des2};
-        float mult = range;
-        ArrayList<PieEntry> yEntrys = new ArrayList<>();
-        // ArrayList<PieEntry> entries = new ArrayList<PieEntry>();
-        // NOTE: The order of the entries when being added to the entries array determines their position around the center of
-        // the chart.
-        double tong2 = amount1 + amount2;
-        double[] yData2 = {amount1, amount2};
-        for (int i = 0; i < count; i++) {
-            yEntrys.add(new PieEntry((float) (yData2[i] / tong2) * 100,
-                    mParties[i % mParties.length]));
-        }
-        PieDataSet dataSet = new PieDataSet(yEntrys, null);
-        dataSet.setSliceSpace(3f);
-        //dataSet.setIconsOffset(new MPPointF(0, 40)); xem lại
-        dataSet.setSelectionShift(5f);
-        dataSet.setValueTextColor(Color.BLACK);
-        // add a lot of colors
-        ArrayList<Integer> colors = new ArrayList<Integer>();
-        colors.add(Color.BLUE);
-        colors.add(Color.GREEN);
-        colors.add(Color.MAGENTA);
-        colors.add(Color.YELLOW);
-        colors.add(ColorTemplate.getHoloBlue());
-        dataSet.setColors(colors);
-        dataSet.setYValuePosition(PieDataSet.ValuePosition.OUTSIDE_SLICE);
-        data2 = new PieData(dataSet);
-        data2.setValueFormatter(new PercentFormatter());
-        data2.setValueTextSize(12f);
-        data2.setValueTextColor(Color.BLACK);
-        // undo all highlights
-        pieChartMp.invalidate();
-        Legend l = pieChartMp.getLegend();
-        l.setVerticalAlignment(Legend.LegendVerticalAlignment.TOP);
-        l.setHorizontalAlignment(Legend.LegendHorizontalAlignment.RIGHT);
-        l.setOrientation(Legend.LegendOrientation.HORIZONTAL);
-        l.setDrawInside(false);
-        l.setEnabled(true);
-    }
-
-    private void setData3(int count, float range) {
-        Des1 = edtDes1.getText().toString();
-        Des2 = edtDes2.getText().toString();
-        Des3 = edtDes3.getText().toString();
-        String[] mParties = new String[]{Des1, Des2, Des3};
-        float mult = range;
-        ArrayList<PieEntry> yEntrys = new ArrayList<>();
-        tong3 = amount1 + amount2 + amount3;
-        double[] yData3 = {amount1, amount2, amount3};
-        for (int i = 0; i < count; i++) {
-            // yEntrys.add(new PieEntry((float)()
-            yEntrys.add(new PieEntry((float) (yData3[i] / tong3) * 100, mParties[i % mParties.length]));
-        }
-        PieDataSet dataSet = new PieDataSet(yEntrys, null);
-        dataSet.setSliceSpace(3f);
-        //dataSet.setIconsOffset(new MPPointF(0, 40)); xem lai
-        dataSet.setSelectionShift(5f);
-        dataSet.setValueLineColor(Color.BLACK);
-        // add a lot of colors
-        ArrayList<Integer> colors = new ArrayList<Integer>();
-        colors.add(Color.BLUE);
-        colors.add(Color.GREEN);
-        colors.add(Color.MAGENTA);
-        colors.add(Color.YELLOW);
-        colors.add(ColorTemplate.getHoloBlue());
-        dataSet.setColors(colors);
-        dataSet.setYValuePosition(PieDataSet.ValuePosition.OUTSIDE_SLICE);
-        data3 = new PieData(dataSet);
-        data3.setValueFormatter(new PercentFormatter());
-        data3.setValueTextSize(12f);
-        data3.setValueTextColor(Color.BLACK);
-        // undo all highlights
-        pieChartMp.invalidate();
-        Legend l = pieChartMp.getLegend();
-        l.setVerticalAlignment(Legend.LegendVerticalAlignment.TOP);
-        l.setHorizontalAlignment(Legend.LegendHorizontalAlignment.RIGHT);
-        l.setOrientation(Legend.LegendOrientation.HORIZONTAL);
-        l.setDrawInside(false);
-        l.setEnabled(true);
-    }
-
-    private void setData4(int count, float range) {
-        Des1 = edtDes1.getText().toString();
-        Des2 = edtDes2.getText().toString();
-        Des3 = edtDes3.getText().toString();
-        Des4 = edtDes4.getText().toString();
-        String[] mParties = new String[]{Des1, Des2, Des3, Des4};
-        float mult = range;
-        ArrayList<PieEntry> yEntrys = new ArrayList<>();
-        // NOTE: The order of the entries when being added to the entries array determines their position around the center of
-        // the chart.
-        double tong4 = amount1 + amount2 + amount3 + amount4;
-        double[] yData4 = {amount1, amount2, amount3, amount4};
-        for (int i = 0; i < count; i++) {
-            yEntrys.add(new PieEntry((float) (yData4[i] / tong4) * 100,
-                    mParties[i % mParties.length]));
-        }
-        PieDataSet dataSet = new PieDataSet(yEntrys, null);
-        dataSet.setSliceSpace(3f);
-        //dataSet.setIconsOffset(new MPPointF(0, 40)); xem lại
-        dataSet.setSelectionShift(5f);
-        // add a lot of colors
-        ArrayList<Integer> colors = new ArrayList<Integer>();
-        colors.add(Color.BLUE);
-        colors.add(Color.GREEN);
-        colors.add(Color.MAGENTA);
-        colors.add(Color.YELLOW);
-        colors.add(ColorTemplate.getHoloBlue());
-        dataSet.setColors(colors);
-        dataSet.setYValuePosition(PieDataSet.ValuePosition.OUTSIDE_SLICE);
-        data4 = new PieData(dataSet);
-        data4.setValueFormatter(new PercentFormatter());
-        data4.setValueTextSize(12f);
-        data4.setValueTextColor(Color.BLACK);
-        // undo all highlights
-        pieChartMp.invalidate();
-        Legend l = pieChartMp.getLegend();
-        l.setVerticalAlignment(Legend.LegendVerticalAlignment.TOP);
-        l.setHorizontalAlignment(Legend.LegendHorizontalAlignment.RIGHT);
-        l.setOrientation(Legend.LegendOrientation.HORIZONTAL);
-        l.setDrawInside(false);
-        l.setEnabled(true);
-    }
+//    private void setData2(int count, float range) {
+//        //Des3=edtDes3.getText().toString();
+//        String[] mParties = new String[]{Des1, Des2};
+//        float mult = range;
+//        ArrayList<PieEntry> yEntrys = new ArrayList<>();
+//        // ArrayList<PieEntry> entries = new ArrayList<PieEntry>();
+//        // NOTE: The order of the entries when being added to the entries array determines their position around the center of
+//        // the chart.
+//        double tong2 = amount1 + amount2;
+//        double[] yData2 = {amount1, amount2};
+//        for (int i = 0; i < count; i++) {
+//            yEntrys.add(new PieEntry((float) (yData2[i] / tong2) * 100,
+//                    mParties[i % mParties.length]));
+//        }
+//        PieDataSet dataSet = new PieDataSet(yEntrys, null);
+//        dataSet.setSliceSpace(3f);
+//        //dataSet.setIconsOffset(new MPPointF(0, 40)); xem lại
+//        dataSet.setSelectionShift(5f);
+//        dataSet.setValueTextColor(Color.BLACK);
+//        // add a lot of colors
+//        ArrayList<Integer> colors = new ArrayList<Integer>();
+//        colors.add(Color.BLUE);
+//        colors.add(Color.GREEN);
+//        colors.add(Color.MAGENTA);
+//        colors.add(Color.YELLOW);
+//        colors.add(ColorTemplate.getHoloBlue());
+//        dataSet.setColors(colors);
+//        dataSet.setYValuePosition(PieDataSet.ValuePosition.OUTSIDE_SLICE);
+//        data2 = new PieData(dataSet);
+//        data2.setValueFormatter(new PercentFormatter());
+//        data2.setValueTextSize(12f);
+//        data2.setValueTextColor(Color.BLACK);
+//        // undo all highlights
+//        pieChartMp.invalidate();
+//        Legend l = pieChartMp.getLegend();
+//        l.setVerticalAlignment(Legend.LegendVerticalAlignment.TOP);
+//        l.setHorizontalAlignment(Legend.LegendHorizontalAlignment.RIGHT);
+//        l.setOrientation(Legend.LegendOrientation.HORIZONTAL);
+//        l.setDrawInside(false);
+//        l.setEnabled(true);
+//    }
+//
+//    private void setData3(int count, float range) {
+//        Des1 = edtDes1.getText().toString();
+//        Des2 = edtDes2.getText().toString();
+//        Des3 = edtDes3.getText().toString();
+//        String[] mParties = new String[]{Des1, Des2, Des3};
+//        float mult = range;
+//        ArrayList<PieEntry> yEntrys = new ArrayList<>();
+//        tong3 = amount1 + amount2 + amount3;
+//        double[] yData3 = {amount1, amount2, amount3};
+//        for (int i = 0; i < count; i++) {
+//            // yEntrys.add(new PieEntry((float)()
+//            yEntrys.add(new PieEntry((float) (yData3[i] / tong3) * 100, mParties[i % mParties.length]));
+//        }
+//        PieDataSet dataSet = new PieDataSet(yEntrys, null);
+//        dataSet.setSliceSpace(3f);
+//        //dataSet.setIconsOffset(new MPPointF(0, 40)); xem lai
+//        dataSet.setSelectionShift(5f);
+//        dataSet.setValueLineColor(Color.BLACK);
+//        // add a lot of colors
+//        ArrayList<Integer> colors = new ArrayList<Integer>();
+//        colors.add(Color.BLUE);
+//        colors.add(Color.GREEN);
+//        colors.add(Color.MAGENTA);
+//        colors.add(Color.YELLOW);
+//        colors.add(ColorTemplate.getHoloBlue());
+//        dataSet.setColors(colors);
+//        dataSet.setYValuePosition(PieDataSet.ValuePosition.OUTSIDE_SLICE);
+//        data3 = new PieData(dataSet);
+//        data3.setValueFormatter(new PercentFormatter());
+//        data3.setValueTextSize(12f);
+//        data3.setValueTextColor(Color.BLACK);
+//        // undo all highlights
+//        pieChartMp.invalidate();
+//        Legend l = pieChartMp.getLegend();
+//        l.setVerticalAlignment(Legend.LegendVerticalAlignment.TOP);
+//        l.setHorizontalAlignment(Legend.LegendHorizontalAlignment.RIGHT);
+//        l.setOrientation(Legend.LegendOrientation.HORIZONTAL);
+//        l.setDrawInside(false);
+//        l.setEnabled(true);
+//    }
+//
+//    private void setData4(int count, float range) {
+//        Des1 = edtDes1.getText().toString();
+//        Des2 = edtDes2.getText().toString();
+//        Des3 = edtDes3.getText().toString();
+//        Des4 = edtDes4.getText().toString();
+//        String[] mParties = new String[]{Des1, Des2, Des3, Des4};
+//        float mult = range;
+//        ArrayList<PieEntry> yEntrys = new ArrayList<>();
+//        // NOTE: The order of the entries when being added to the entries array determines their position around the center of
+//        // the chart.
+//        double tong4 = amount1 + amount2 + amount3 + amount4;
+//        double[] yData4 = {amount1, amount2, amount3, amount4};
+//        for (int i = 0; i < count; i++) {
+//            yEntrys.add(new PieEntry((float) (yData4[i] / tong4) * 100,
+//                    mParties[i % mParties.length]));
+//        }
+//        PieDataSet dataSet = new PieDataSet(yEntrys, null);
+//        dataSet.setSliceSpace(3f);
+//        //dataSet.setIconsOffset(new MPPointF(0, 40)); xem lại
+//        dataSet.setSelectionShift(5f);
+//        // add a lot of colors
+//        ArrayList<Integer> colors = new ArrayList<Integer>();
+//        colors.add(Color.BLUE);
+//        colors.add(Color.GREEN);
+//        colors.add(Color.MAGENTA);
+//        colors.add(Color.YELLOW);
+//        colors.add(ColorTemplate.getHoloBlue());
+//        dataSet.setColors(colors);
+//        dataSet.setYValuePosition(PieDataSet.ValuePosition.OUTSIDE_SLICE);
+//        data4 = new PieData(dataSet);
+//        data4.setValueFormatter(new PercentFormatter());
+//        data4.setValueTextSize(12f);
+//        data4.setValueTextColor(Color.BLACK);
+//        // undo all highlights
+//        pieChartMp.invalidate();
+//        Legend l = pieChartMp.getLegend();
+//        l.setVerticalAlignment(Legend.LegendVerticalAlignment.TOP);
+//        l.setHorizontalAlignment(Legend.LegendHorizontalAlignment.RIGHT);
+//        l.setOrientation(Legend.LegendOrientation.HORIZONTAL);
+//        l.setDrawInside(false);
+//        l.setEnabled(true);
+//    }
 
 //    private void setData5(int count, float range) {
 //        Des1 = edtDes1.getText().toString();
@@ -882,6 +885,7 @@ public class BarChartsActivity extends AppCompatActivity {
 //                    break;
             }
         }
+
         @Override
         public void onNothingSelected(AdapterView<?> parent) {
 
