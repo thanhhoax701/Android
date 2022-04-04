@@ -1,0 +1,22 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+//        mavenCentral()
+        maven { url 'https://jitpack.io' }
+        // Thêm thằng này vào để fix lỗi Could not resolve all files for configuration ':app:debugRuntimeClasspath'.
+        jcenter()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+//        mavenCentral()
+        maven { url 'https://jitpack.io' }
+        // Thêm thằng này vào để fix lỗi Could not resolve all files for configuration ':app:debugRuntimeClasspath'.
+        jcenter()
+    }
+}
+rootProject.name = "VeDoThi_TranThanhHoa_B1908387"
+include ':app'

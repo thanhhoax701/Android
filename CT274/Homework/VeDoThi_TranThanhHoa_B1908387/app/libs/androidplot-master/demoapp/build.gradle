@@ -1,0 +1,97 @@
+/*
+ * Copyright 2015 AndroidPlot.com
+ *
+ *    Licensed under the Apache License, Version 2.0 (the "License");
+ *    you may not use this file except in compliance with the License.
+ *    You may obtain a copy of the License at
+ *
+ *        http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *    Unless required by applicable law or agreed to in writing, software
+ *    distributed under the License is distributed on an "AS IS" BASIS,
+ *    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *    See the License for the specific language governing permissions and
+ *    limitations under the License.
+ */
+
+buildscript {
+    ext.kotlin_version = '1.5.31'
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.github.triplet.gradle:play-publisher:3.6.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+plugins {
+    id 'com.android.application'
+    id 'com.github.triplet.play' version '3.6.0'
+}
+
+apply plugin: 'kotlin-android'
+
+dependencies {
+    implementation "androidx.core:core-ktx:1.6.0"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+	implementation project(':androidplot-core')
+    implementation 'com.crittercism:crittercism-android-agent:5.4.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.6.3'
+
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.3'
+
+    testImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.3'
+}
+
+android {
+    compileSdkVersion theCompileSdkVersion
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    defaultConfig {
+        versionCode theVersionCode
+        versionName theVersionName
+        minSdkVersion 14
+        targetSdkVersion theTargetSdkVersion
+        applicationId "com.androidplot.demos"
+    }
+
+    signingConfigs {
+        release {
+            storeFile file(System.getenv("KEYSTORE") ?: "keystore.jks")
+            storePassword System.getenv("KEYSTORE_PASSWORD")
+            keyAlias System.getenv("KEY_ALIAS")
+            keyPassword System.getenv("KEY_PASSWORD")
+        }
+    }
+
+    buildTypes {
+        release {
+            zipAlignEnabled true
+            signingConfig signingConfigs.release
+        }
+
+        debug {
+            debuggable true
+        }
+    }
+
+    lintOptions {
+        // TODO: set to true and address all the lint issues.
+        abortOnError false
+    }
+}
+
+play {
+    // see: https://github.com/Triple-T/gradle-play-publisher
+    serviceAccountCredentials.set(file(System.getenv("PUBLISHER_ACCT_JSON_FILE") ?: "publisher.json"))
+    track = 'beta'
+}
+repositories {
+    mavenCentral()
+}

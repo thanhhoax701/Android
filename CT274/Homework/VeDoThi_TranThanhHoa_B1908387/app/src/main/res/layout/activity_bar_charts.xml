@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".BarChartsActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/linearlayouttong"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#0d09de"
+                android:gravity="center_vertical"
+                android:text="VẼ ĐỒ THỊ CỘT (BAR CHARTS)"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="#0aec06"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Chọn số cột (từ 2 đến 4)"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/spinnerMp"
+                    android:layout_width="90dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@mipmap/vuong">
+
+                </Spinner>
+
+                <Button
+                    android:id="@+id/btnVeBarCharts"
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/ve"
+                    android:text="VẼ"
+                    android:textAllCaps="false"
+                    android:textColor="#ffffff" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#0ad5dc"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/linearlayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvtTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tên đồ thị:"
+                            android:textColor="#232222"
+                            android:textSize="20dp" />
+
+                        <EditText
+                            android:id="@+id/edtTitle"
+                            android:layout_width="140dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/title"
+                            android:hint="Title"
+                            android:textAlignment="center"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearlayout3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#f1e107"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="160dp"
+                            android:text="Tổng số"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvTotal1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:background="#f1e107"
+                            android:hint="0"
+                            android:textColor="#151414"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+                        Homwork 1 Vẽ đồ thị Trang 8
+                        Biên soạn Đoàn Hoà Minh
+
+                        <TextView
+                            android:id="@+id/tvTotal2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="60dp"
+                            android:background="#f1e107"
+                            android:hint="0"
+                            android:textColor="#151414"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="40dp"
+                                android:layout_marginTop="10dp"
+                                android:text=""
+                                android:textSize="20dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="40dp"
+                                android:layout_marginTop="10dp"
+                                android:text="Tên cột"
+                                android:textSize="20dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="70dp"
+                                android:layout_marginTop="10dp"
+                                android:text="Giá trị"
+                                android:textSize="20dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="40dp"
+                                android:layout_marginTop="10dp"
+                                android:text="%"
+                                android:textSize="20dp"
+                                android:textStyle="bold" />
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <TableLayout
+                    android:id="@+id/tableLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#0ad5dc">
+
+                    <TableRow android:id="@+id/tableRow1">
+
+                        <TextView
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:text="1)"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/edtDescription1"
+                            android:layout_width="130dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/title"
+                            android:hint="Description"
+                            android:textAlignment="center"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/edtAmount1"
+                            android:layout_width="100dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/title"
+                            android:hint="0"
+                            android:inputType="number|numberDecimal"
+                            android:textAlignment="center"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvphantram1"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="5dp"
+                            android:background="#0ad5dc"
+                            android:hint="0"
+                            android:textColor="#151414"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow android:id="@+id/tableRow2">
+
+                        <TextView
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:text="2)"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/edtDescription2"
+                            android:layout_width="130dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/title"
+                            android:hint="Description"
+                            android:textAlignment="center"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/edtAmount2"
+                            android:layout_width="100dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/title"
+                            android:hint="0"
+                            android:inputType="number|numberDecimal"
+                            android:textAlignment="center"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvphantram2"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="5dp"
+                            android:background="#0ad5dc"
+                            android:hint="0"
+                            android:textColor="#151414"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow android:id="@+id/tableRow3">
+
+                        <TextView
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:text="3)"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/edtDescription3"
+                            android:layout_width="130dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/title"
+                            android:hint="Description"
+                            android:textAlignment="center"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/edtAmount3"
+                            android:layout_width="100dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/title"
+                            android:hint="0"
+                            android:inputType="number|numberDecimal"
+                            android:textAlignment="center"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvphantram3"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="5dp"
+                            android:background="#0ad5dc"
+                            android:hint="0"
+                            android:textColor="#151414"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow android:id="@+id/tableRow4">
+
+                        <TextView
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:text="4)"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/edtDescription4"
+                            android:layout_width="130dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/title"
+                            android:hint="Description"
+                            android:textAlignment="center"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/edtAmount4"
+                            android:layout_width="100dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/title"
+                            android:hint="0"
+                            android:inputType="number|numberDecimal"
+                            android:textAlignment="center"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvphantram4"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="5dp"
+                            android:background="#0ad5dc"
+                            android:hint="0"
+                            android:textColor="#151414"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+<!--                    <TableRow android:id="@+id/tableRow5">-->
+
+<!--                        <TextView-->
+<!--                            android:layout_marginLeft="5dp"-->
+<!--                            android:layout_marginTop="5dp"-->
+<!--                            android:text="5)"-->
+<!--                            android:textSize="20dp"-->
+<!--                            android:textStyle="bold" />-->
+
+<!--                        <EditText-->
+<!--                            android:id="@+id/edtDescription5"-->
+<!--                            android:layout_width="130dp"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_marginLeft="20dp"-->
+<!--                            android:layout_marginTop="5dp"-->
+<!--                            android:background="@drawable/title"-->
+<!--                            android:hint="Description"-->
+<!--                            android:textAlignment="center"-->
+<!--                            android:textStyle="bold" />-->
+
+<!--                        <EditText-->
+<!--                            android:id="@+id/edtAmount5"-->
+<!--                            android:layout_width="100dp"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_marginLeft="20dp"-->
+<!--                            android:layout_marginTop="5dp"-->
+<!--                            android:background="@drawable/title"-->
+<!--                            android:hint="0"-->
+<!--                            android:inputType="number|numberDecimal"-->
+<!--                            android:textAlignment="center"-->
+<!--                            android:textStyle="bold" />-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/tvphantram5"-->
+<!--                            android:layout_marginLeft="25dp"-->
+<!--                            android:layout_marginTop="5dp"-->
+<!--                            android:background="#0ad5dc"-->
+<!--                            android:hint="0"-->
+<!--                            android:textColor="#151414"-->
+<!--                            android:textSize="15dp"-->
+<!--                            android:textStyle="bold" />-->
+<!--                    </TableRow>-->
+
+<!--                    <TableRow android:id="@+id/tableRow6">-->
+
+<!--                        <TextView-->
+<!--                            android:layout_marginLeft="5dp"-->
+<!--                            android:layout_marginTop="5dp"-->
+<!--                            android:text="6)"-->
+<!--                            android:textSize="20dp"-->
+<!--                            android:textStyle="bold" />-->
+
+<!--                        <EditText-->
+<!--                            android:id="@+id/edtDescription6"-->
+<!--                            android:layout_width="130dp"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_marginLeft="20dp"-->
+<!--                            android:layout_marginTop="5dp"-->
+<!--                            android:background="@drawable/title"-->
+<!--                            android:hint="Description"-->
+<!--                            android:textAlignment="center"-->
+<!--                            android:textStyle="bold" />-->
+
+<!--                        <EditText-->
+<!--                            android:id="@+id/edtAmount6"-->
+<!--                            android:layout_width="100dp"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_marginLeft="20dp"-->
+<!--                            android:layout_marginTop="5dp"-->
+<!--                            android:background="@drawable/title"-->
+<!--                            android:hint="0"-->
+<!--                            android:inputType="number|numberDecimal"-->
+<!--                            android:textAlignment="center"-->
+<!--                            android:textStyle="bold" />-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/tvphantram6"-->
+<!--                            android:layout_marginLeft="25dp"-->
+<!--                            android:layout_marginTop="5dp"-->
+<!--                            android:background="#0ad5dc"-->
+<!--                            android:hint="0"-->
+<!--                            android:textColor="#151414"-->
+<!--                            android:textSize="15dp"-->
+<!--                            android:textStyle="bold" />-->
+<!--                    </TableRow>-->
+
+<!--                    <TableRow android:id="@+id/tableRow7">-->
+
+<!--                        <TextView-->
+<!--                            android:layout_marginLeft="5dp"-->
+<!--                            android:layout_marginTop="5dp"-->
+<!--                            android:text="7)"-->
+<!--                            android:textSize="20dp"-->
+<!--                            android:textStyle="bold" />-->
+
+<!--                        <EditText-->
+<!--                            android:id="@+id/edtDescription7"-->
+<!--                            android:layout_width="130dp"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_marginLeft="20dp"-->
+<!--                            android:layout_marginTop="5dp"-->
+<!--                            android:background="@drawable/title"-->
+<!--                            android:hint="Description"-->
+<!--                            android:textAlignment="center"-->
+<!--                            android:textStyle="bold" />-->
+
+<!--                        <EditText-->
+<!--                            android:id="@+id/edtAmount7"-->
+<!--                            android:layout_width="100dp"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_marginLeft="20dp"-->
+<!--                            android:layout_marginTop="5dp"-->
+<!--                            android:background="@drawable/title"-->
+<!--                            android:hint="0"-->
+<!--                            android:inputType="number|numberDecimal"-->
+<!--                            android:textAlignment="center"-->
+<!--                            android:textStyle="bold" />-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/tvphantram7"-->
+<!--                            android:layout_marginLeft="25dp"-->
+<!--                            android:layout_marginTop="5dp"-->
+<!--                            android:background="#0ad5dc"-->
+<!--                            android:hint="0"-->
+<!--                            android:textColor="#151414"-->
+<!--                            android:textSize="15dp"-->
+<!--                            android:textStyle="bold" />-->
+<!--                    </TableRow>-->
+
+<!--                    <TableRow android:id="@+id/tableRow8">-->
+
+<!--                        <TextView-->
+<!--                            android:layout_marginLeft="5dp"-->
+<!--                            android:layout_marginTop="5dp"-->
+<!--                            android:text="8)"-->
+<!--                            android:textSize="20dp"-->
+<!--                            android:textStyle="bold" />-->
+
+<!--                        <EditText-->
+<!--                            android:id="@+id/edtDescription8"-->
+<!--                            android:layout_width="130dp"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_marginLeft="20dp"-->
+<!--                            android:layout_marginTop="5dp"-->
+<!--                            android:background="@drawable/title"-->
+<!--                            android:hint="Description"-->
+<!--                            android:textAlignment="center"-->
+<!--                            android:textStyle="bold" />-->
+
+<!--                        <EditText-->
+<!--                            android:id="@+id/edtAmount8"-->
+<!--                            android:layout_width="100dp"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_marginLeft="20dp"-->
+<!--                            android:layout_marginTop="5dp"-->
+<!--                            android:background="@drawable/title"-->
+<!--                            android:hint="0"-->
+<!--                            android:inputType="number|numberDecimal"-->
+<!--                            android:textAlignment="center"-->
+<!--                            android:textStyle="bold" />-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/tvphantram8"-->
+<!--                            android:layout_marginLeft="25dp"-->
+<!--                            android:layout_marginTop="5dp"-->
+<!--                            android:background="#0ad5dc"-->
+<!--                            android:hint="0"-->
+<!--                            android:textColor="#151414"-->
+<!--                            android:textSize="15dp"-->
+<!--                            android:textStyle="bold" />-->
+<!--                    </TableRow>-->
+
+<!--                    <TableRow android:id="@+id/tableRow9">-->
+
+<!--                        <TextView-->
+<!--                            android:layout_marginLeft="5dp"-->
+<!--                            android:layout_marginTop="5dp"-->
+<!--                            android:text="9)"-->
+<!--                            android:textSize="20dp"-->
+<!--                            android:textStyle="bold" />-->
+
+<!--                        <EditText-->
+<!--                            android:id="@+id/edtDescription9"-->
+<!--                            android:layout_width="130dp"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_marginLeft="20dp"-->
+<!--                            android:layout_marginTop="5dp"-->
+<!--                            android:background="@drawable/title"-->
+<!--                            android:hint="Description"-->
+<!--                            android:textAlignment="center"-->
+<!--                            android:textStyle="bold" />-->
+
+<!--                        <EditText-->
+<!--                            android:id="@+id/edtAmount9"-->
+<!--                            android:layout_width="100dp"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_marginLeft="20dp"-->
+<!--                            android:layout_marginTop="5dp"-->
+<!--                            android:background="@drawable/title"-->
+<!--                            android:hint="0"-->
+<!--                            android:inputType="number|numberDecimal"-->
+<!--                            android:textAlignment="center"-->
+<!--                            android:textStyle="bold" />-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/tvphantram9"-->
+<!--                            android:layout_marginLeft="25dp"-->
+<!--                            android:layout_marginTop="5dp"-->
+<!--                            android:background="#0ad5dc"-->
+<!--                            android:hint="0"-->
+<!--                            android:textColor="#151414"-->
+<!--                            android:textSize="15dp"-->
+<!--                            android:textStyle="bold" />-->
+<!--                    </TableRow>-->
+                </TableLayout>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.github.mikephil.charting.charts.BarChart
+                        android:id="@+id/BarChartMpAndroid"
+                        android:layout_width="350dp"
+                        android:layout_height="350dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp">
+
+                    </com.github.mikephil.charting.charts.BarChart>
+
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/laytitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="30dp"
+                    android:hint=""
+                    android:textAlignment="center"
+                    android:textColor="#2d2b2b"
+                    android:textSize="15dp"
+                    android:textStyle="italic" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

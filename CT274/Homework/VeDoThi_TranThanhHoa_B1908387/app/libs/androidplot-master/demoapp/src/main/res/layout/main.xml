@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2015 AndroidPlot.com
+  ~
+  ~    Licensed under the Apache License, Version 2.0 (the "License");
+  ~    you may not use this file except in compliance with the License.
+  ~    You may obtain a copy of the License at
+  ~
+  ~        http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~    Unless required by applicable law or agreed to in writing, software
+  ~    distributed under the License is distributed on an "AS IS" BASIS,
+  ~    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~    See the License for the specific language governing permissions and
+  ~    limitations under the License.
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/startSimplePieExButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pie Chart"/>
+
+            <Button
+                android:id="@+id/startSimpleXYExButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="A Simple XY Plot"/>
+
+            <Button
+                android:id="@+id/animatedXYPlotExButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Animated XY Plot"/>
+
+            <Button
+                android:id="@+id/startScatterExButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="XY Scatter Plot"/>
+
+            <Button
+                android:id="@+id/startDynamicXYExButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="A Dynamic XY Plot"/>
+
+            <Button
+                android:id="@+id/startCandlestickExButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Candlestick Chart"/>
+
+            <Button
+                android:id="@+id/startOrSensorExButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Realtime Orientation Sensor Plot"/>
+
+            <Button
+                android:id="@+id/startDualScaleExButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dual Scale XY"/>
+
+            <Button
+                android:id="@+id/startTimeSeriesExButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ts_title"/>
+
+            <Button
+                android:id="@+id/startStepChartExButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Step Chart"
+                />
+
+            <Button
+                android:id="@+id/startScrollZoomButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Scroll and Zoom"
+                />
+
+            <Button
+                android:id="@+id/startBarPlotExButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bar Plot"/>
+
+            <Button
+                android:id="@+id/startXyRegionExampleButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="XYRegion Example"
+                android:enabled="true"/>
+
+            <Button
+                android:id="@+id/startXyListViewExButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ListView of XYPlots"
+                android:enabled="true"/>
+
+            <Button
+                android:id="@+id/startXyRecyclerViewExButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="RecyclerView of XYPlots"
+                android:enabled="true"/>
+
+            <Button
+                android:id="@+id/startXYPlotWithBgImgExample"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="XY Background Example"
+                android:enabled="true"/>
+
+            <Button
+                android:id="@+id/startECGExample"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ECG Example"
+                android:enabled="true"/>
+
+            <Button
+                android:id="@+id/fxPlotExample"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="f(x) Example"
+                android:enabled="true"/>
+
+            <Button
+                android:id="@+id/bubbleChartExample"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bubble Chart Example"
+                android:enabled="true"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:autoLink="web"
+        android:gravity="center"
+        android:text="http://androidplot.com"/>
+</LinearLayout>
+
