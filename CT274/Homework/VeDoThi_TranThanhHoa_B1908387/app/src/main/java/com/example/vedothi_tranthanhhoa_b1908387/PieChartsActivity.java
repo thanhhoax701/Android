@@ -44,25 +44,18 @@ public class PieChartsActivity extends AppCompatActivity {
     EditText edttitle;
     EditText edtso1, edtso2, edtso3, edtso4, edtso5, edtso6, edtso7, edtso8, edtso9;
     TextView tv1, tv2, tv3, tv4, tv5, tv6, tv7, tv8, tv9;
-    TextView tvDes;
-    TextView tvAmount, tvtlaytitle;
-    TextView tvpt, tvTotal, tvTotalPt;
+    TextView tvtlaytitle;
+    TextView tvTotal, tvTotalPt;
     int vitri;
     String Des1, Des2, Des3, Des4, Des5, Des6, Des7, Des8, Des9;
     double amount1, amount2, amount3, amount4, amount5, amount6, amount7, amount8, amount9;
-    double tong3, tong3pt, totalAmount;
     TableLayout tableLayout;
-    LinearLayout linearLayout1, linearLayout2;
     TableRow tableRow1, tableRow2, tableRow3, tableRow4, tableRow5, tableRow6, tableRow7, tableRow8, tableRow9;
-    LinearLayout linearLayout;
     PieChart pieChartMp;
-    BarChart mChart;
-    BarData databar2, databar3, databar4, databar5, databar6, databar7, databar8, databar9;
     Spinner spinner;
-    int id;
-    Button btnVeMp, btnPieChart, btnthoat, btnLineChart, btnbarChart, btnVeBar, btnFxChart, btnthoatbarChart;
-    PieData data, data3, data4, data5, data6, data2, data7, data8, data9;
-    Button btnsave, btnsavebar;
+    Button btnVeMp, btnthoat;
+    PieData data, data2, data3, data4, data5, data6, data7, data8, data9;
+    Button btnsave;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -411,7 +404,7 @@ public class PieChartsActivity extends AppCompatActivity {
         String[] mParties = new String[]{Des1, Des2, Des3};
         float mult = range;
         ArrayList<PieEntry> yEntrys = new ArrayList<>();
-        tong3 = amount1 + amount2 + amount3;
+        double tong3 = amount1 + amount2 + amount3;
         double[] yData3 = {amount1, amount2, amount3};
         for (int i = 0; i < count; i++) {
             // yEntrys.add(new PieEntry((float)()
@@ -556,7 +549,7 @@ public class PieChartsActivity extends AppCompatActivity {
                     tableRow2.setVisibility(View.VISIBLE);
                     tableRow3.setVisibility(View.VISIBLE);
                     tableRow4.setVisibility(View.INVISIBLE);
-                    tableRow5.setVisibility(View.INVISIBLE);
+//                    tableRow5.setVisibility(View.INVISIBLE);
 //                    tableRow6.setVisibility(View.INVISIBLE);
 //                    tableRow7.setVisibility(View.INVISIBLE);
 //                    tableRow8.setVisibility(View.INVISIBLE);
