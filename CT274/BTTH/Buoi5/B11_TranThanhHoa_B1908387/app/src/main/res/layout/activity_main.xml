@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="#AEAEF7"
+        android:gravity="center"
+        android:text="SMS MANAGER"
+        android:textColor="#f00"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/newmassage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="#AEF5F7"
+        android:gravity="center"
+        android:text="NEW MESSAGE"
+        android:textColor="#04259C"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/inbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="#AEF7B5"
+        android:gravity="center"
+        android:text="INBOX"
+        android:textColor="#062B9B"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/exit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="#E4AEF7"
+        android:gravity="center"
+        android:text="EXIT"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/tren_song" />
+
+</LinearLayout>
