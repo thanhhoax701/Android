@@ -1,0 +1,1 @@
+Bên cạnh việc sinh ra tập tin trong thời gian chạy, ta cũng cần tạo ra các tập tin trong thời gian phát triển ứng dụng, sau đó sẽ được dùng trong thời gian chạy. Ví dụ, ta muốn tạo ra tập tin trợ giúp (Help) cho ứng dụng. Trong trường hợp này, ta thêm tập tin help vào thư mục res/raw.

@@ -21,24 +21,24 @@ public class MainActivity extends AppCompatActivity {
         btnContact.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, DisplayAllContact.class);
-                startActivity(intent);
+                Intent intentContact = new Intent(MainActivity.this, DisplayAllContact.class);
+                startActivity(intentContact);
             }
         });
 
         btnCall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, DisplayAllCallLog.class);
-                startActivity(intent);
+                Intent intentCallLog = new Intent(MainActivity.this, DisplayAllCallLog.class);
+                startActivity(intentCallLog);
             }
         });
 
         btnMedia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, MediaContent.class);
-                startActivity(intent);
+                Intent intentMedia = new Intent(MainActivity.this, MediaContent.class);
+                startActivity(intentMedia);
             }
         });
     }

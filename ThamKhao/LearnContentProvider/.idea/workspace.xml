@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1f66f520-b5c1-424f-96f6-d3c90cdf3e2a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../CT274/BTTH/Buoi5/B9_TranThanhHoa_B1908387/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CT274/BTTH/Buoi5/B9_TranThanhHoa_B1908387/app/src/main/java/com/example/b9_tranthanhhoa_b1908387/DispLayAudioList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CT274/BTTH/Buoi5/B9_TranThanhHoa_B1908387/app/src/main/java/com/example/b9_tranthanhhoa_b1908387/DisplayMediaList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CT274/BTTH/Buoi5/B9_TranThanhHoa_B1908387/app/src/main/java/com/example/b9_tranthanhhoa_b1908387/DisplayPictureList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CT274/BTTH/Buoi5/B9_TranThanhHoa_B1908387/app/src/main/java/com/example/b9_tranthanhhoa_b1908387/DisplayVideoList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CT274/BTTH/Buoi5/B9_TranThanhHoa_B1908387/app/src/main/res/layout/activity_display_audio_list.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CT274/BTTH/Buoi5/B9_TranThanhHoa_B1908387/app/src/main/res/layout/activity_display_media_list.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CT274/BTTH/Buoi5/B9_TranThanhHoa_B1908387/app/src/main/res/layout/activity_display_picture_list.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CT274/BTTH/Buoi5/B9_TranThanhHoa_B1908387/app/src/main/res/layout/activity_display_video_list.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CT274/BTTH/Buoi5/B9_TranThanhHoa_B1908387/app/src/main/res/menu/menu_popup.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LearnContentProvider.rar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.classpath" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/android_support_v4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/android_support_v4_b50b0df3bed2fae2fbd5040efd7a05e7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.settings/org.eclipse.core.resources.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LearnContentProvider.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/LearnContentProvider.apk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/classes.dex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/classes/tranduythanh/com/BuildConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/classes/tranduythanh/com/MainActivity.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/classes/tranduythanh/com/R$attr.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/classes/tranduythanh/com/R$drawable.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/classes/tranduythanh/com/R$id.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/classes/tranduythanh/com/R$layout.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/classes/tranduythanh/com/R$menu.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/classes/tranduythanh/com/R$string.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/classes/tranduythanh/com/R$style.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/classes/tranduythanh/com/R.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/classes/tranduythanh/com/ShowAllContactActivity$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/classes/tranduythanh/com/ShowAllContactActivity.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/dexedLibs/android-support-v4-b50b0df3bed2fae2fbd5040efd7a05e7.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/jarlist.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/res/drawable-hdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/res/drawable-ldpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/res/drawable-mdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/res/drawable-xhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/resources.ap_" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gen/tranduythanh/com/BuildConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gen/tranduythanh/com/R.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ic_launcher-web.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/android-support-v4.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proguard-project.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/drawable-hdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/drawable-ldpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/drawable-mdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/layout/activity_show_all_contact.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/menu/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/menu/activity_show_all_contact.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/values-v11/styles.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/values-v14/styles.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/values/styles.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tranduythanh/com/MainActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tranduythanh/com/ShowAllContactActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../call-log-master.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../call-log-master/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../call-log-master/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../call-log-master/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../call-log-master/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../call-log-master/ant.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../call-log-master/build.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../call-log-master/proguard-project.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../call-log-master/project.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../call-log-master/res/drawable-hdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../call-log-master/res/drawable-ldpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../call-log-master/res/drawable-mdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../call-log-master/res/drawable-xhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../call-log-master/res/layout/main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../call-log-master/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../call-log-master/src/edu/univdhaka/iit/appclub/calllog/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CT274/BTTH/Buoi5/B9_TranThanhHoa_B1908387/.idea/deploymentTargetDropDown.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../CT274/BTTH/Buoi5/B9_TranThanhHoa_B1908387/.idea/deploymentTargetDropDown.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CT274/BTTH/Buoi5/B9_TranThanhHoa_B1908387/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../CT274/BTTH/Buoi5/B9_TranThanhHoa_B1908387/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CT274/BTTH/Buoi5/B9_TranThanhHoa_B1908387/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../CT274/BTTH/Buoi5/B9_TranThanhHoa_B1908387/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CT274/BTTH/Buoi5/B9_TranThanhHoa_B1908387/app/src/main/java/com/example/b9_tranthanhhoa_b1908387/DisplayAllCallLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../CT274/BTTH/Buoi5/B9_TranThanhHoa_B1908387/app/src/main/java/com/example/b9_tranthanhhoa_b1908387/DisplayAllCallLog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CT274/BTTH/Buoi5/B9_TranThanhHoa_B1908387/app/src/main/java/com/example/b9_tranthanhhoa_b1908387/DisplayAllContact.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../CT274/BTTH/Buoi5/B9_TranThanhHoa_B1908387/app/src/main/java/com/example/b9_tranthanhhoa_b1908387/DisplayAllContact.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CT274/BTTH/Buoi5/B9_TranThanhHoa_B1908387/app/src/main/java/com/example/b9_tranthanhhoa_b1908387/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../CT274/BTTH/Buoi5/B9_TranThanhHoa_B1908387/app/src/main/java/com/example/b9_tranthanhhoa_b1908387/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CT274/BTTH/Buoi5/B9_TranThanhHoa_B1908387/app/src/main/java/com/example/b9_tranthanhhoa_b1908387/MediaContent.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../CT274/BTTH/Buoi5/B9_TranThanhHoa_B1908387/app/src/main/java/com/example/b9_tranthanhhoa_b1908387/MediaContent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CT274/BTTH/Buoi5/B9_TranThanhHoa_B1908387/app/src/main/res/layout/activity_display_all_call_log.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../CT274/BTTH/Buoi5/B9_TranThanhHoa_B1908387/app/src/main/res/layout/activity_display_all_call_log.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CT274/BTTH/Buoi5/B9_TranThanhHoa_B1908387/app/src/main/res/layout/activity_display_all_contact.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../CT274/BTTH/Buoi5/B9_TranThanhHoa_B1908387/app/src/main/res/layout/activity_display_all_contact.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CT274/BTTH/Buoi5/B9_TranThanhHoa_B1908387/app/src/main/res/layout/activity_media_content.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../CT274/BTTH/Buoi5/B9_TranThanhHoa_B1908387/app/src/main/res/layout/activity_media_content.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CT274/BTTH/buoi1/B2_TranThanhHoa_B1908387/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../CT274/BTTH/buoi1/B2_TranThanhHoa_B1908387/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NLCSMMT" beforeDir="false" afterPath="$PROJECT_DIR$/../../NLCSMMT" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\tth16\.android\avd\Pixel_3a_API_27.avd]" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="27N4CeVa7WXMaLNyLJ4tDbfsQFo" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="cidr.known.project.marker" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+  </component>
+  <component name="RunManager">
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="LearnContentProvider" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="INSPECTION_WITHOUT_ACTIVITY_RESTART" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1f66f520-b5c1-424f-96f6-d3c90cdf3e2a" name="Default Changelist" comment="" />
+      <created>1649147084381</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1649147084381</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <Button
+        android:id="@+id/btnshowallcontact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Show All Contact" />
+
+    <Button
+        android:id="@+id/btnaccesscalllog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Access The Call Log" />
+
+    <Button
+        android:id="@+id/btnmediastore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Access Media Store" />
+
+    <Button
+        android:id="@+id/btnaccessbookmarks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Access Bookmarks" />
+
+</LinearLayout>

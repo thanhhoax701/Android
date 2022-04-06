@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="#ffffaa"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="@string/txt0"
+        android:textAllCaps="true"
+        android:textColor="#ff0000"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/txtText1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="#fbf"
+        android:hint="@string/edittext1"
+        android:padding="5dp"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btnSave1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="#bff"
+        android:onClick="onClickSaveInternal"
+        android:padding="5dp"
+        android:text="@string/btn1"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btnSave2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="#A0D381"
+        android:onClick="onClickSaveExternal"
+        android:padding="5dp"
+        android:text="@string/btn3"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btnLoad1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="#bff"
+        android:onClick="onClickLoadInternal"
+        android:padding="5dp"
+        android:text="@string/btn2"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btnLoad2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="#A0D381"
+        android:onClick="onClickLoadExternal"
+        android:padding="5dp"
+        android:text="@string/btn4"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btnDelete1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="#bff"
+        android:onClick="onClickDeleteInternal"
+        android:padding="5dp"
+        android:text="@string/btn5"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btnDelete2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="#A0D381"
+        android:onClick="onClickDeleteExternal"
+        android:padding="5dp"
+        android:text="@string/btn7"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/help"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:text="@string/btn6"
+        android:textSize="20sp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:src="@drawable/hoasung" />
+
+    </FrameLayout>
+
+</LinearLayout>

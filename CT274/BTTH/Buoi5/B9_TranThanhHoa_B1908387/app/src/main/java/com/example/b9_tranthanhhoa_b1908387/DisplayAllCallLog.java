@@ -20,8 +20,8 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class DisplayAllCallLog extends AppCompatActivity {
-    Button back2;
-    ListView lvcallLog;
+    Button backCall;
+    ListView lvCallLog;
 
     @SuppressLint("NewApi")
     @Override
@@ -29,17 +29,15 @@ public class DisplayAllCallLog extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_all_call_log);
 
-        back2 = (Button) findViewById(R.id.btntrove2);
-        lvcallLog = (ListView) findViewById(R.id.lvCallLog);
+        backCall = (Button) findViewById(R.id.btnTroveCall);
+        lvCallLog = (ListView) findViewById(R.id.lvCallLog);
 
         ArrayList<String> list2 = new ArrayList<String>();
         ContentResolver cr2 = getContentResolver();
         ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, list2);
-        lvcallLog.setAdapter(adapter2);
+        lvCallLog.setAdapter(adapter2);
         // Lấy lịch sử cuộc gọi
-        String[] projection = new String[]{CallLog.Calls.DATE,
-                CallLog.Calls.NUMBER,
-                CallLog.Calls.DURATION};
+        String[] projection = new String[]{CallLog.Calls.DATE, CallLog.Calls.NUMBER, CallLog.Calls.DURATION};
         if (checkSelfPermission(Manifest.permission.READ_CALL_LOG) != PackageManager.PERMISSION_GRANTED) {
             return;
         }
@@ -69,9 +67,10 @@ public class DisplayAllCallLog extends AppCompatActivity {
         }
         managedCursor.close();
 
-        back2.setOnClickListener(new View.OnClickListener() {
+        // Trở về
+        backCall.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 finish();
             }
         });

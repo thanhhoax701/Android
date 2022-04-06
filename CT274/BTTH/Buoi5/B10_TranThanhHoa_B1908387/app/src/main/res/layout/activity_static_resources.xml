@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StaticResources"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="#ffffaa"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="@string/txtstatic1"
+        android:textAllCaps="true"
+        android:textColor="#ff0000"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="#ffffaa"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="@string/txtstatic2"
+        android:textAllCaps="true"
+        android:textColor="#4A63F1"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/edithd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="#ffffaa"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text=""
+        android:textColor="#4A63F1"
+        android:textSize="20sp"/>
+
+</LinearLayout>

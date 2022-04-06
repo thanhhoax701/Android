@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">B10_TranThanhHoa_B1908387</string>
+    <string name="txt0">Save the file</string>
+    <string name="edittext1">Enter the text you want to save</string>
+    <string name="btn1">SAVE TO INTERNAL STOGARE</string>
+    <string name="btn3">SAVE TO EXTERNAL STOGARE</string>
+    <string name="btn2">LOAD FROM INTERNAL STORAGE</string>
+    <string name="btn4">LOAD FROM EXTERNAL STORAGE</string>
+    <string name="btn5">DELETE FILES ON INTERNAL STORAGE</string>
+    <string name="btn7">DELETE FILES ON EXTERNAL STORAGE</string>
+    <string name="btn6">HELP</string>
+    <string name="txtstatic1">STATIC RESOUCRES</string>
+    <string name="txtstatic2">HELP</string>
+</resources>
