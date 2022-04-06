@@ -179,10 +179,16 @@ public class MainActivity extends AppCompatActivity {
     // XOÁ FILE TRÊN BỘ NHỚ TRONG
     public void onClickDeleteInternal(View view) {
 //        Toast.makeText(this, "Hello internal", Toast.LENGTH_SHORT).show();
+        String kqxoa = "";
         boolean thongtinxoa = deleteFile("textfile.txt");
-        String a = Boolean.toString(thongtinxoa);
+//        String a = Boolean.toString(thongtinxoa);
+        if (thongtinxoa == true) {
+            kqxoa = "Xoá tập tin thành công";
+        } else {
+            kqxoa = "Xoá tập tin không thành công";
+        }
         textBox.setText(" ");
-        displayToast(a);
+        displayToast(kqxoa);
     }
 
 
@@ -195,8 +201,8 @@ public class MainActivity extends AppCompatActivity {
 //        // Khai báo tập tin
 //        File filesdcard = new File(root+"/Myfile.txt");
         File sdCard = Environment.getExternalStorageDirectory();
-        File directory = new File(sdCard.getAbsolutePath() + "/MyFiles");
-        File filesdcard = new File(directory, "textfile.txt");
+        File root = new File(sdCard.getAbsolutePath() + "/MyFiles");
+        File filesdcard = new File(root, "textfile.txt");
         //Xóa tập tin
         boolean xoatc = filesdcard.delete();
         if (xoatc == true) {
