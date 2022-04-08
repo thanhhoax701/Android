@@ -16,11 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light">
         <activity
-            android:name=".Inbox"
-            android:exported="false" />
+            android:name=".Inbox"/>
         <activity
-            android:name=".Newmessage"
-            android:exported="false" />
+            android:name=".Newmessage" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -30,8 +28,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!-- <activity android:name=".Inbox"/> -->
-        <receiver android:name="SMS"
+        <receiver
+            android:name="SMS"
             android:exported="false">
             <intent-filter>
                 <action android:name="android.provider.Telephony.SMS_RECEIVED" />

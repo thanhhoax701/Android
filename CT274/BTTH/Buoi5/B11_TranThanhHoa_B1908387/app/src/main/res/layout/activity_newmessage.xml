@@ -63,4 +63,14 @@
 
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/hienthi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="#f00"
+        android:textSize="30sp"
+        android:layout_margin="20sp"
+        android:layout_gravity="center"/>
+
 </LinearLayout>

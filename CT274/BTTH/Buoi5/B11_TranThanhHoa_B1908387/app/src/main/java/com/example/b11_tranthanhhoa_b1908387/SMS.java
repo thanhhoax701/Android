@@ -17,8 +17,7 @@ public class SMS extends BroadcastReceiver {
             SmsMessage[] messages = new SmsMessage[pduArray.length];
             for (int i = 0; i < pduArray.length; i++) {
                 messages[i] = SmsMessage.createFromPdu((byte[]) pduArray[i]);
-                Log.d("MySMSMonitor", "From: " +
-                        messages[i].getOriginatingAddress());
+                Log.d("MySMSMonitor", "From: " + messages[i].getOriginatingAddress());
                 Log.d("MySMSMonitor", "Msg: " + messages[i].getMessageBody());
             }
             Log.d("MySMSMonitor", "SMS Message Received.");

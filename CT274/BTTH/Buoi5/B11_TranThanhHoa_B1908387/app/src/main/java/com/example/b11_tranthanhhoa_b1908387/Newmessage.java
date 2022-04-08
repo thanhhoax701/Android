@@ -7,9 +7,10 @@ import android.telephony.SmsManager;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
-public class Newmessage extends AppCompatActivity {
+    public class Newmessage extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +19,7 @@ public class Newmessage extends AppCompatActivity {
 
         Button btn = (Button)this.findViewById(R.id.send);
         Button exit = (Button)this.findViewById(R.id.exitinbox);
+        TextView hienthi = (TextView) findViewById(R.id.hienthi);
 
         btn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -30,11 +32,13 @@ public class Newmessage extends AppCompatActivity {
                             message.getText().toString(), null, null);
 //                    Toast toast = Toast.makeText(Newmessage.this, "SMS sent successful", Toast.LENGTH_LONG);
 //                    toast.show();
-                    Toast.makeText(Newmessage.this, "SMS sent successful", Toast.LENGTH_LONG).show();
+//                    Toast.makeText(Newmessage.this, "SMS sent successful", Toast.LENGTH_LONG).show();
+                    hienthi.setText("SMS sent successful");
                 }catch(Exception e){
 //                    Toast toast = Toast.makeText(Newmessage.this, "Sending SMS failed",Toast.LENGTH_LONG);
 //                    toast.show();
-                    Toast.makeText(Newmessage.this, "Sending SMS failed",Toast.LENGTH_LONG).show();
+//                    Toast.makeText(Newmessage.this, "Sending SMS failed",Toast.LENGTH_LONG).show();
+                    hienthi.setText("Sending SMS failed");
                     e.printStackTrace();
                 }
             }

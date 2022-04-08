@@ -21,8 +21,8 @@ public class MainActivity extends AppCompatActivity {
         newmessage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent newmessage=new
-                        Intent(MainActivity.this,Newmessage.class);
+                Intent newmessage = new
+                        Intent(MainActivity.this, Newmessage.class);
                 startActivity(newmessage);
             }
         });
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         inbox.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent inbox=new Intent(MainActivity.this,Inbox.class);
+                Intent inbox = new Intent(MainActivity.this, Inbox.class);
                 startActivity(inbox);
             }
         });

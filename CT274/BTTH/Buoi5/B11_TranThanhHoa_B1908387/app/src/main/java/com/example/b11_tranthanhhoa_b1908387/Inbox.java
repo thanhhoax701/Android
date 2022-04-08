@@ -7,6 +7,8 @@ import android.app.ListActivity;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.ListAdapter;
 import android.widget.ListView;
@@ -18,44 +20,51 @@ public class Inbox extends ListActivity {
 
     @SuppressWarnings("deprecation")
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_inbox);
-        Cursor c = getContentResolver().query(
-                Uri.parse("content://sms/inbox"), null,
-                null, null, null);
+    public void onCreate(Bundle bundle) {
+        super.onCreate(bundle);
+//        setContentView(R.layout.activity_inbox);
+        Cursor c = getContentResolver().query(Uri.parse("content://sms/inbox"),
+                null, null, null, null);
+//        ContentResolver contentResolver = getContentResolver();
+//        final String[] projection = new String[]{"*"};
+//        Uri uri = Uri.parse("content://mms-sms/conversations/");
+//        Cursor c = contentResolver.query(uri, projection, null, null, null);
         startManagingCursor(c);
         String[] columns = new String[]{"body"};
         int[] names = new int[]{R.id.row};
-        adapter = new SimpleCursorAdapter(this, R.layout.activity_inbox,
-                c, columns, names);
+        adapter = new SimpleCursorAdapter(this, R.layout.activity_inbox, c, columns, names);
         setListAdapter(adapter);
     }
-
-
-//    @Override
-//    public void onCreate(Bundle bundle) {
-//        super.onCreate(bundle);
-//        Cursor c = getContentResolver().query(
-//                Uri.parse("content://sms/inbox"), null,
-//                null, null, null);
-//        startManagingCursor(c);
-//        String[] columns = new String[]{"body"};
-//        int[] names = new int[]{R.id.row};
-//        adapter = new SimpleCursorAdapter(this, R.layout.activity_inbox,
-//                c, columns, names);
-//        setListAdapter(adapter);
-//    }
 
     @Override
     protected void onListItemClick(ListView l, View v, int position, long ida) {
         super.onListItemClick(l, v, position, ida);
         Cursor mycursor = (Cursor) getListView().getItemAtPosition(position);
-        @SuppressLint("Range") Toast toast = Toast.makeText(Inbox.this, "From " +
-                        mycursor.getString(mycursor.getColumnIndex("address")) + ":\n"
-                        +
-                        mycursor.getString(mycursor.getColumnIndex("body")),
+        @SuppressLint("Range") Toast toast = Toast.makeText(Inbox.this, "From "
+                        + mycursor.getString(mycursor.getColumnIndex("address"))
+                        + ":\n"
+                        + mycursor.getString(mycursor.getColumnIndex("body")),
                 Toast.LENGTH_LONG);
         toast.show();
     }
+
+//    public void onKey(View v, int keyCode, KeyEvent event){
+//        if (event.getAction() == KeyEvent.ACTION_DOWN
+//                && keyCode == KeyEvent.KEYCODE_BACK) {
+//            finish();
+//        }
+//    }
+//    @Override
+//    protected void onResume() {
+//        super.onResume();
+//    }
+//    @Override
+//    protected void onPause() {
+//        super.onPause();
+//    }
+//    @Override
+//    protected void onDestroy() {
+//        super.onDestroy();
+//    }
+
 }
