@@ -6,9 +6,11 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -21,6 +23,15 @@ public class DisplayPictureList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_picture_list);
 
+        // Trở về của Picture
+        backPicture = (Button) findViewById(R.id.btnPictureTrove);
+        backPicture.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+
         lvPicture = (ListView) findViewById(R.id.lvPicture);
         ArrayList<String> listImage = new ArrayList<String>();
         ArrayAdapter<String> adapterImage = new ArrayAdapter<String>(this,
@@ -32,9 +43,9 @@ public class DisplayPictureList extends AppCompatActivity {
                 MediaStore.Images.Media.TITLE,
                 MediaStore.Images.Media.DATE_ADDED
         };
-        Cursor cursor =
-                getApplicationContext().getContentResolver().query(MediaStore.Images.Media.EXTERNAL_CONTENT_URI,
-                        projection, null, null, null);
+        Cursor cursor = getApplicationContext().getContentResolver().query(
+                MediaStore.Images.Media.EXTERNAL_CONTENT_URI,
+                projection, null, null, null);
         int count = 0;
         if (cursor.moveToFirst()) {
             do {
@@ -51,13 +62,10 @@ public class DisplayPictureList extends AppCompatActivity {
         }
         cursor.close();
 
-
-        // Trở về của Picture
-        backPicture = (Button) findViewById(R.id.btnPictureTrove);
-        backPicture.setOnClickListener(new View.OnClickListener() {
+        lvPicture.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onClick(View view) {
-                finish();
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Toast.makeText(DisplayPictureList.this, listImage.get(i), Toast.LENGTH_SHORT).show();
             }
         });
     }

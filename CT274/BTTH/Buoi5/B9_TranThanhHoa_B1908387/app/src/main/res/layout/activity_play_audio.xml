@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PlayAudio">
+
+    <Button
+        android:id="@+id/btnAudioTrove"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ADABAD"
+        android:gravity="center"
+        android:text="TRỞ VỀ DANH SÁCH BÀI HÁT"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:src="@drawable/tainghe"
+        android:layout_margin="10dp"/>
+
+    <TextView
+        android:id="@+id/songsName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tên bài hát"
+        android:textSize="25sp"
+        android:textColor="#f00"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/player_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:textColor="#000"
+            android:textStyle="bold" />
+
+        <SeekBar
+            android:id="@+id/seek_bar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/player_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:textColor="#000"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/btnPrevious"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_previous"/>
+
+        <ImageView
+            android:id="@+id/btnPlay"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_play"/>
+
+        <ImageView
+            android:id="@+id/btnPause"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:visibility="gone"
+            android:src="@drawable/ic_pause"/>
+
+        <ImageView
+            android:id="@+id/btnNext"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_next"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

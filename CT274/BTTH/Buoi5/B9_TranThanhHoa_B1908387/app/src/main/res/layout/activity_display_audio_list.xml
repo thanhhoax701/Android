@@ -31,8 +31,15 @@
         android:id="@+id/lvAudio"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#cccccc">
+        android:background="#cccccc"/>
 
-    </ListView>
+    <TextView
+        android:id="@+id/txtShow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:textColor="@color/black"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"/>
 
 </LinearLayout>

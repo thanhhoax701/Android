@@ -11,9 +11,11 @@ import android.provider.BaseColumns;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -55,6 +57,15 @@ public class DisplayVideoList extends AppCompatActivity {
             }
             while (c.moveToNext());
         }
+
+        lvVideo.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+//                    txtChon.setText(listaudio.get(i));
+                Toast.makeText(DisplayVideoList.this, "Hay quá ta", Toast.LENGTH_SHORT).show();
+            }
+        });
+
         c.close();
     }
 
