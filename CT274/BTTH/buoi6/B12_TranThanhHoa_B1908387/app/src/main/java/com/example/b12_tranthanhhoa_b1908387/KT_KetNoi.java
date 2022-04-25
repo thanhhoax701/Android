@@ -37,7 +37,9 @@ public class KT_KetNoi extends AppCompatActivity {
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(KT_KetNoi.this, "Chưa làm được má ơi!!!", Toast.LENGTH_SHORT).show();
+//                http://www.wrox.com
+                WebView simpleWebView = (WebView) findViewById(R.id.webView);
+                simpleWebView.loadUrl(String.valueOf(edtKt.getText().toString().trim()));
             }
         });
     }
@@ -58,16 +60,19 @@ public class KT_KetNoi extends AppCompatActivity {
 
         if (networkInfo == null) {
             tvKt1.setText("Mạng mặc định không hoạt động");
+            tvKt2.setText("");
             return false;
         }
 
         if (!networkInfo.isConnected()) {
             tvKt1.setText("Mạng không được kết nối");
+            tvKt2.setText("");
             return false;
         }
 
         if (!networkInfo.isAvailable()) {
             tvKt1.setText("Mạng chưa sẵn sàng");
+            tvKt2.setText("");
             return false;
         }
         tvKt1.setText("Kết nối tốt");
