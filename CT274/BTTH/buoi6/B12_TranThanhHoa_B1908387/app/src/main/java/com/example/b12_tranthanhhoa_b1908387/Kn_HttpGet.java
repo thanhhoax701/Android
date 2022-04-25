@@ -204,8 +204,8 @@ public class Kn_HttpGet extends AppCompatActivity {
         //Hoặc nếu dùng máy ảo genymotion: 10.0.3.2
 //        String URL = "http://192.168.0.103:88/Buoi_6/";
 
-        TextView tvDownload = (TextView) findViewById(R.id.tvLoadimg);
-        tvDownload.setOnClickListener(new View.OnClickListener() {
+        TextView tvDownload1 = (TextView) findViewById(R.id.tvLoadimg);
+        tvDownload1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 EditText loadanh = (EditText) findViewById(R.id.nhapurl1);
