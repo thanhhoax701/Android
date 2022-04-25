@@ -63,7 +63,7 @@ public class Kn_HttpGet extends AppCompatActivity {
 //         ************************************************************************/
     }
 
-//    /***********************************
+    //    /***********************************
 //     TẢI DỮ LIỆU HÌNH ẢNH THÔNG QUA GET
 //     ***********************************/
 //    /**
@@ -92,7 +92,7 @@ public class Kn_HttpGet extends AppCompatActivity {
         return bitmap;
     }
 
-//    /****************************************************************************
+    //    /****************************************************************************
 //     * Do việc tải dữ liệu từ máy chủ thường mất thời gian,
 //     *
 //     * để giao diện chính không bị treo trong thời gian tải dữ liệu,
@@ -116,6 +116,7 @@ public class Kn_HttpGet extends AppCompatActivity {
         protected Bitmap doInBackground(String... urls) {
             return DownloadImage(urls[0]);
         }
+
         @Override
         protected void onPostExecute(Bitmap result) {
             ImageView img = (ImageView) findViewById(R.id.img);
@@ -148,7 +149,7 @@ public class Kn_HttpGet extends AppCompatActivity {
             Log.e("Networking", e.getLocalizedMessage());
             return str;
         }
-        if (in == null){
+        if (in == null) {
             Log.e("Text URL", "Check connection or URL again!");
             return str;
         }
@@ -170,10 +171,12 @@ public class Kn_HttpGet extends AppCompatActivity {
         }
         return str;
     }
+
     public class DownloadTextTask extends AsyncTask<String, Void, String> {
         protected String doInBackground(String... urls) {
             return DownloadText(urls[0]);
         }
+
         @Override
         protected void onPostExecute(String result) {
             TextView tv1 = (TextView) findViewById(R.id.tv);
@@ -199,7 +202,7 @@ public class Kn_HttpGet extends AppCompatActivity {
         //Địa chỉ của máy tính: lấy địa chỉ thật của máy đang dùng
         //Hoặc nếu dùng máy ảo AVD: 10.0.2.2
         //Hoặc nếu dùng máy ảo genymotion: 10.0.3.2
-        //String URL = "http://42.112.33.228/Buoi_6/";
+//        String URL = "http://192.168.0.103:88/Buoi_6/";
 
         TextView tvDownload = (TextView) findViewById(R.id.tvLoadimg);
         tvDownload.setOnClickListener(new View.OnClickListener() {
@@ -207,12 +210,13 @@ public class Kn_HttpGet extends AppCompatActivity {
             public void onClick(View view) {
                 EditText loadanh = (EditText) findViewById(R.id.nhapurl1);
                 // Nhập https://kynguyenlamdep.com/wpcontent/uploads/2020/01/anh-thien-nhien-dep.jpg?is-pending-load=1
+                // Nhập http://192.168.0.103:88/Buoi_6/cantho_3.png
                 String url1 = loadanh.getText().toString();
-                //TextView txt1 = (TextView)findViewById(R.id.tvURLimg);
+                TextView txt1 = (TextView) findViewById(R.id.tvURLimg);
                 //Thực thi tải dữ liệu hình ảnh
-                //new DownloadImageTask().execute(URL+"cantho_3.png");
+//                new DownloadImageTask().execute(URL+"cantho_3.png");
                 new DownloadImageTask().execute(url1);
-                //txt1.setText("Got Image");
+                txt1.setText("Got Image");
             }
         });
 
@@ -222,13 +226,14 @@ public class Kn_HttpGet extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 EditText loadText = (EditText) findViewById(R.id.nhapurl2);
-                //nhập https://vanmautuyenchon.net/the-loai-3/nghe-va-ke-laicau-chuyen-nang-niu-tung-hat-giong-tap-lam-van-lop-3.html
+                // Nhập https://vanmautuyenchon.net/the-loai-3/nghe-va-ke-laicau-chuyen-nang-niu-tung-hat-giong-tap-lam-van-lop-3.html
+                // Nhập http://192.168.0.103:88/Buoi_6/Thuhttpget.txt
                 String url2 = loadText.getText().toString();
-                //TextView txt2 = (TextView)findViewById(R.id.tvURLtext);
+                TextView txt2 = (TextView) findViewById(R.id.tvURLtext);
                 //Thực thi tải dữ liệu hình ảnh
-                //new DownloadTextTask().execute(URL+"Thuhttpget.txt");
+//                new DownloadTextTask().execute(URL+"Thuhttpget.txt");
                 new DownloadTextTask().execute(url2);
-                //txt2.setText("Got Text");
+                txt2.setText("Got Text");
             }
         });
     }

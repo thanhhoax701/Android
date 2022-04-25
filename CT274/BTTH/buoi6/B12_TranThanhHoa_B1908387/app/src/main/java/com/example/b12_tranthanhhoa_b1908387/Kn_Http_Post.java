@@ -6,6 +6,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -55,7 +56,7 @@ public class Kn_Http_Post extends AppCompatActivity {
             os.close();
             /* (5) Lấy đáp ứng HTTP_OK để biết kết nối đã được thiết lập hay chưa */
             response = httpConn.getResponseCode();
-            Log.w("Respone Code", "" + response);
+            Log.w("ResponeCode", "" + response);
             /* (6) Nếu kết nối được thiết lập thì tiến hành lấy đối tượng
             InputStream từ kết nối để lấy dữ liệu từ Server */
             if (response == HttpURLConnection.HTTP_OK) {
@@ -172,7 +173,8 @@ public class Kn_Http_Post extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kn_http_post);
 
-        String URL = "http://10.0.2.2/Buoi_6/thongtin.php";
+        String URL = "http://192.168.0.103:88/Buoi_6/thongtin.php";
+        Log.d("111", "onCreate: " + URL);
         JSONObject postParams = new JSONObject();
         try {
             postParams.put("mssv", "b1908387");
