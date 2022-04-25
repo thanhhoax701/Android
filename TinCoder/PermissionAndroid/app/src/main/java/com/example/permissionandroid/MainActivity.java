@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         btnRequestPermission.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+//                Toast.makeText(MainActivity.this, "Hello", Toast.LENGTH_SHORT).show();
                 clickRequestPermission();
             }
         });

@@ -34,7 +34,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/editkt"
+            android:id="@+id/editKt"
             android:layout_width="1dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -86,7 +86,7 @@
         android:weightSum="10">
 
         <TextView
-            android:id="@+id/kt2"
+            android:id="@+id/tvKt1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="6"
@@ -97,7 +97,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/kt1"
+            android:id="@+id/tvKt2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="4"
@@ -109,7 +109,7 @@
     </LinearLayout>
 
     <WebView
-        android:id="@+id/wv"
+        android:id="@+id/webView"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

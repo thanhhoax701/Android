@@ -216,7 +216,7 @@ public class Kn_HttpGet extends AppCompatActivity {
                 //Thực thi tải dữ liệu hình ảnh
 //                new DownloadImageTask().execute(URL+"cantho_3.png");
                 new DownloadImageTask().execute(url1);
-                txt1.setText("Got Image");
+//                txt1.setText("Got Image");
             }
         });
 
@@ -233,7 +233,7 @@ public class Kn_HttpGet extends AppCompatActivity {
                 //Thực thi tải dữ liệu hình ảnh
 //                new DownloadTextTask().execute(URL+"Thuhttpget.txt");
                 new DownloadTextTask().execute(url2);
-                txt2.setText("Got Text");
+//                txt2.setText("Got Text");
             }
         });
     }
