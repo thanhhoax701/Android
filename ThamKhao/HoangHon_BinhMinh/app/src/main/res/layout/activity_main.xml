@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <com.marcinmoskala.arcseekbar.ArcSeekBar
+        android:id="@+id/defaultSeekbar"
+        android:layout_width="300dp"
+        android:layout_height="150dp" />
+
+    <com.marcinmoskala.arcseekbar.ArcSeekBar
+        android:id="@+id/seekBarBackground"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        app:progressBackgroundColor="#f00"
+        app:progressBackgroundWidth="20dp" />
+
+    <com.marcinmoskala.arcseekbar.ArcSeekBar
+        android:id="@+id/gradientSeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:progress="50"
+        app:roundEdges="true" />
+
+
+</LinearLayout>

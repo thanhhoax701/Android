@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
     ArrayAdapter adapterUser, adapterChat;
     // Khai báo ip và port của Server
     // Gõ lệnh ipconfig trên Command Promp hoặc mở Tark Manager để tìm ip.
-    private final String URL_SERVER = "http://192.168.0.102:3000";
+    private final String URL_SERVER = "http://192.168.46.245:3000";
     private Socket mSocket; // Chọn Socket (IO.socket.client)
 
     @Override

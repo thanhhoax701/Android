@@ -173,7 +173,7 @@ public class Kn_Http_Post extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kn_http_post);
 
-        String URL = "http://192.168.0.103:88/Buoi_6/thongtin.php";
+        String URL = "http://192.168.46.245:88/Buoi_6/thongtin.php";
         Log.d("111", "onCreate: " + URL);
         JSONObject postParams = new JSONObject();
         try {

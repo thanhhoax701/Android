@@ -1,5 +1,7 @@
 package com.example.realtimedatabase;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -16,6 +18,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class MainActivity extends AppCompatActivity {
     EditText edTData;
     Button btnPushData, btnGetData;
@@ -25,6 +30,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Push dữ liệu của Map
+        Map<String, Boolean> map = new HashMap<>();
+        map.put("key1", true);
+        map.put("key2", false);
 
         Anhxa();
 
@@ -47,19 +57,28 @@ public class MainActivity extends AppCompatActivity {
         // Đẩy dữ liệu lên
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("channel");
-        myRef.setValue(edTData.getText().toString().trim());
+        // Chuyển sang kiểu int
+//        myRef.setValue(Integer.parseInt(edTData.getText().toString().trim()));
+        myRef.setValue(edTData.getText().toString().trim(), new DatabaseReference.CompletionListener() {
+            @Override
+            public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
+                Toast.makeText(MainActivity.this, "Push data success", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     private void getData() {
         // Lấy dữ liệu về
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("channel");
+        DatabaseReference myRef = database.getReference("user").child("mssv");
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+                // Chuyển sang kiểu int
+//                int value = dataSnapshot.getValue(Integer.class);
+//                tvGetData.setText(String.valueOf(value));
                 String value = dataSnapshot.getValue(String.class);
-//                tvGetData.setText(value);
-                Toast.makeText(MainActivity.this, value, Toast.LENGTH_SHORT).show();
+                tvGetData.setText(value);
             }
 
             @Override

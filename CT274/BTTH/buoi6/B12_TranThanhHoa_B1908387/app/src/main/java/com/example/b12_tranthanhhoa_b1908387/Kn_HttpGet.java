@@ -209,7 +209,8 @@ public class Kn_HttpGet extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 EditText loadanh = (EditText) findViewById(R.id.nhapurl1);
-                // Nhập https://kynguyenlamdep.com/wpcontent/uploads/2020/01/anh-thien-nhien-dep.jpg?is-pending-load=1
+                // Nhập https://kynguyenlamdep.com/wp-content/uploads/2020/01/anh-thien-nhien-dep.jpg?is-pending-load=1
+                // Nhập https://vcdn-vnexpress.vnecdn.net/2021/03/02/103650164-731814290963011-1374-5806-7233-1614677857.jpg
                 // Nhập http://192.168.0.103:88/Buoi_6/cantho_3.png
                 String url1 = loadanh.getText().toString();
                 TextView txt1 = (TextView) findViewById(R.id.tvURLimg);
@@ -226,8 +227,9 @@ public class Kn_HttpGet extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 EditText loadText = (EditText) findViewById(R.id.nhapurl2);
-                // Nhập https://vanmautuyenchon.net/the-loai-3/nghe-va-ke-laicau-chuyen-nang-niu-tung-hat-giong-tap-lam-van-lop-3.html
-                // Nhập http://192.168.0.103:88/Buoi_6/Thuhttpget.txt
+                // Nhập https://vanmautuyenchon.net/the-loai-3/nghe-va-ke-lai-cau-chuyen-nang-niu-tung-hat-giong-tap-lam-van-lop-3.html
+                // Nhập https://www.ctu.edu.vn/
+                // Nhập http://192.168.46.245:88/Buoi_6/Thuhttpget.txt
                 String url2 = loadText.getText().toString();
                 TextView txt2 = (TextView) findViewById(R.id.tvURLtext);
                 //Thực thi tải dữ liệu hình ảnh
