@@ -18,10 +18,10 @@ public class XemStudent extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_xem_student);
 
-        final EditText so = (EditText) this.findViewById(R.id.stt);
-        final TextView ct = (TextView) this.findViewById(R.id.hienthi);
-        Button xemsv = (Button) this.findViewById(R.id.btnxemmot);
-        Button trove = (Button) this.findViewById(R.id.btntrove);
+        final EditText so = this.findViewById(R.id.stt);
+        final TextView ct = this.findViewById(R.id.hienthi);
+        Button xemsv = this.findViewById(R.id.btnxemmot);
+        Button trove = this.findViewById(R.id.btntrove);
 
         xemsv.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {

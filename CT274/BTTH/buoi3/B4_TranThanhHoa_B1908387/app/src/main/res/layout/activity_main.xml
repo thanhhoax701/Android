@@ -4,65 +4,65 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="30sp"
-        android:text="Lập trình với ListView"
-        android:textColor="#f00"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:textStyle="bold"/>
+        android:text="Lập trình với ListView"
+        android:textColor="#f00"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/bt1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ListView Control với mảng dữ liệu định sẵn"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp"
+        android:text="ListView Control với mảng dữ liệu định sẵn" />
 
     <Button
         android:id="@+id/bt2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ListView với mảng dữ liệu được lưu trong xml"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp"
+        android:text="ListView với mảng dữ liệu được lưu trong xml" />
 
     <Button
         android:id="@+id/bt3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Arraylist và ListView Control"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp"
+        android:text="Arraylist và ListView Control" />
 
     <Button
         android:id="@+id/bt4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Arraylist là các Object bất kỳ"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp"
+        android:text="Arraylist là các Object bất kỳ" />
 
     <Button
         android:id="@+id/bt5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ListView dưới dạng ListActivity"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp"
+        android:text="ListView dưới dạng ListActivity" />
 
     <Button
         android:id="@+id/exit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Thoát"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp"
+        android:text="Thoát" />
 
 </LinearLayout>

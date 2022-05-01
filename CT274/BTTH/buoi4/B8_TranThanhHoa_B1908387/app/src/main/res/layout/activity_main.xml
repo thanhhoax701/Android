@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center">
+        android:gravity="center"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/textView1"
@@ -42,35 +42,35 @@
         android:id="@+id/editText2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Họ và tên"
-        android:textColorHint="@android:color/holo_blue_light"
+        android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
-        android:layout_marginLeft="15dp"/>
+        android:hint="Họ và tên"
+        android:textColorHint="@android:color/holo_blue_light" />
 
     <EditText
         android:id="@+id/editText3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Buổi thực hành"
-        android:textColorHint="@android:color/holo_blue_bright"
+        android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
-        android:layout_marginLeft="15dp"/>
+        android:hint="Buổi thực hành"
+        android:textColorHint="@android:color/holo_blue_bright" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginRight="15dp"
         android:layout_marginLeft="15dp"
-        android:gravity="center">
+        android:layout_marginRight="15dp"
+        android:gravity="center"
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/button2"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
+            android:layout_marginRight="50dp"
             android:onClick="onClickAddName"
-            android:text="Thêm tên"
-            android:layout_marginRight="50dp"/>
+            android:text="Thêm tên" />
 
 
         <Button
@@ -83,10 +83,10 @@
     </LinearLayout>
 
     <ListView
+        android:id="@+id/lv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/lv"
-        android:layout_marginRight="10dp"
-        android:layout_marginLeft="10dp" />
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
 
 </LinearLayout>

@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button btnTest = (Button)findViewById(R.id.btnTest);
+        Button btnTest = (Button) findViewById(R.id.btnTest);
         btnTest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
                 displayToasr("You have checked IMAGEButton");
             }
         });
-        Button btnExit = (Button)findViewById(R.id.btnExit);
+        Button btnExit = (Button) findViewById(R.id.btnExit);
         btnExit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -51,17 +51,16 @@ public class MainActivity extends AppCompatActivity {
                 EditText edit = (EditText) findViewById(R.id.editText);
                 String text = edit.getText().toString();
                 TextView txt = (TextView) findViewById(R.id.text);
-                if(((ToggleButton)v).isChecked())
+                if (((ToggleButton) v).isChecked())
                     txt.setText(text);
                 else
                     txt.setText("");
             }
         });
-        RadioGroup radioGroup=(RadioGroup) findViewById(R.id.rg);
+        RadioGroup radioGroup = (RadioGroup) findViewById(R.id.rg);
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId)
-            {
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
                 RadioButton rb1 = (RadioButton) findViewById(R.id.rb1);
                 RadioButton rb2 = (RadioButton) findViewById(R.id.rb2);
                 ImageView image1 = (ImageView) findViewById(R.id.image1);
@@ -82,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
         chkAutoSau.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(((CheckBox)v).isChecked())
+                if (((CheckBox) v).isChecked())
                     displayToasr("AutoSave CheckBox have checked");
                 else
                     displayToasr("AutoSave CheckBox have unchecked");
@@ -92,14 +91,15 @@ public class MainActivity extends AppCompatActivity {
         chkStar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(((CheckBox) v).isChecked())
+                if (((CheckBox) v).isChecked())
                     displayToasr("StarStyle CheckBox have checked");
                 else
                     displayToasr("StarSyle CheckBox have unchecked");
             }
         });
     }
-    private void displayToasr(String msg){
-        Toast.makeText(getBaseContext(),msg,Toast.LENGTH_LONG).show();
+
+    private void displayToasr(String msg) {
+        Toast.makeText(getBaseContext(), msg, Toast.LENGTH_LONG).show();
     }
 }

@@ -56,22 +56,8 @@ public class Kn_HttpGet extends AppCompatActivity {
             Log.e("Networking", e.getLocalizedMessage());
         }
         return in;
-
-//        /**************************** LƯU Ý *************************************
-//         *Để kết nối Internet,cần thêm lệnh sau vào AndroidManifest.xml: *
-//         *<uses-permission android:name="android.permission.INTERNET" /> *
-//         ************************************************************************/
     }
 
-    //    /***********************************
-//     TẢI DỮ LIỆU HÌNH ẢNH THÔNG QUA GET
-//     ***********************************/
-//    /**
-//     * Phương thức DownloadImage() lấy URL để thực hiện việc tải ảnh về.
-//     *
-//     * @param URL
-//     * @return bitmap
-//     */
     private Bitmap DownloadImage(String URL) {
         Bitmap bitmap = null;
         InputStream in = null;
@@ -92,22 +78,6 @@ public class Kn_HttpGet extends AppCompatActivity {
         return bitmap;
     }
 
-    //    /****************************************************************************
-//     * Do việc tải dữ liệu từ máy chủ thường mất thời gian,
-//     *
-//     * để giao diện chính không bị treo trong thời gian tải dữ liệu,
-//     *
-//     * ta cần tạo luồng riêng để tải tài nguyên trên mạng,
-//     *
-//     * AsyncTask cho phép thực hiện tác vụ chạy nền trong thời gian riêng
-//     biệt *
-//     * và trả kết quả trong một luồng UI
-//     *
-//     * Bằng cách này, ta có thể thực hiện hoạt động nền mà
-//     *
-//     * không cần xử lý vấn đề luồng phức tạp
-//     *
-//
 //     ***************************************************************************/
     public class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
         //Thực hiện tải dữ liệu
@@ -130,15 +100,6 @@ public class Kn_HttpGet extends AppCompatActivity {
         }
     }
 
-    /********************************
-     TẢI DỮ LIỆU TEXT THÔNG QUA GET
-     ********************************/
-    /**
-     * Phương thức tải dữ liệu từ URL
-     *
-     * @param URL
-     * @return chuỗi kí tự tải về từ URL
-     */
     private String DownloadText(String URL) {
         int BUFFER_SIZE = 2000;
         InputStream in = null;
@@ -179,9 +140,9 @@ public class Kn_HttpGet extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(String result) {
-            TextView tv1 = (TextView) findViewById(R.id.tv);
+            TextView tv1 = findViewById(R.id.tv);
             tv1.setText(result);
-            TextView tv = (TextView) findViewById(R.id.tvURLtext);
+            TextView tv = findViewById(R.id.tvURLtext);
             if (!result.trim().equals(""))
                 tv.setText("Got text.");
             else
@@ -194,14 +155,6 @@ public class Kn_HttpGet extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kn_http_get);
-        // Nếu dùng địa chỉ localhost(127.0.0.1) để chạy thử và kiểm lỗi,
-        // máy ảo sẽ tự lấy địa chỉ loopback của chính nó để thực thi
-        // như thế ứng dụng không truy cập được server bên ngoài.
-        // Để truy cập vào localhost từ máy ảo,
-        // cần dùng 1 trong các địa chỉ sau:
-        //Địa chỉ của máy tính: lấy địa chỉ thật của máy đang dùng
-        //Hoặc nếu dùng máy ảo AVD: 10.0.2.2
-        //Hoặc nếu dùng máy ảo genymotion: 10.0.3.2
 //        String URL = "http://192.168.0.103:88/Buoi_6/";
 
         TextView tvDownload1 = (TextView) findViewById(R.id.tvLoadimg);
@@ -213,7 +166,7 @@ public class Kn_HttpGet extends AppCompatActivity {
                 // Nhập https://vcdn-vnexpress.vnecdn.net/2021/03/02/103650164-731814290963011-1374-5806-7233-1614677857.jpg
                 // Nhập http://192.168.0.103:88/Buoi_6/cantho_3.png
                 String url1 = loadanh.getText().toString();
-                TextView txt1 = (TextView) findViewById(R.id.tvURLimg);
+                TextView txt1 = findViewById(R.id.tvURLimg);
                 //Thực thi tải dữ liệu hình ảnh
 //                new DownloadImageTask().execute(URL+"cantho_3.png");
                 new DownloadImageTask().execute(url1);
@@ -222,16 +175,16 @@ public class Kn_HttpGet extends AppCompatActivity {
         });
 
         //Thực thi tải dữ liệu văn bản
-        TextView tvDownLoad2 = (TextView) findViewById(R.id.tvLoadtext);
+        TextView tvDownLoad2 = findViewById(R.id.tvLoadtext);
         tvDownLoad2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                EditText loadText = (EditText) findViewById(R.id.nhapurl2);
+                EditText loadText = findViewById(R.id.nhapurl2);
                 // Nhập https://vanmautuyenchon.net/the-loai-3/nghe-va-ke-lai-cau-chuyen-nang-niu-tung-hat-giong-tap-lam-van-lop-3.html
                 // Nhập https://www.ctu.edu.vn/
                 // Nhập http://192.168.46.245:88/Buoi_6/Thuhttpget.txt
                 String url2 = loadText.getText().toString();
-                TextView txt2 = (TextView) findViewById(R.id.tvURLtext);
+                TextView txt2 = findViewById(R.id.tvURLtext);
                 //Thực thi tải dữ liệu hình ảnh
 //                new DownloadTextTask().execute(URL+"Thuhttpget.txt");
                 new DownloadTextTask().execute(url2);

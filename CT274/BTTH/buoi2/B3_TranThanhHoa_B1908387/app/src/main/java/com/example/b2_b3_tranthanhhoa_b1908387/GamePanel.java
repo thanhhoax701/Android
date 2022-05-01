@@ -39,38 +39,36 @@ public class GamePanel extends SurfaceView implements SurfaceHolder.Callback {
     }
 
     @SuppressLint("WrongCall")
-    public void doDraw(Canvas c){
-        if(count > 0){
+    public void doDraw(Canvas c) {
+        if (count > 0) {
             bug.onDraw(c);
             Paint tpaint = new Paint();
             tpaint.setColor(Color.BLACK);
             tpaint.setTextSize(80);
             c.drawText("Time: " + count, 100, 200, tpaint);
-        }
-        else if (count <= 0){
-            if(kq >= 3){
+        } else if (count <= 0) {
+            if (kq >= 3) {
                 Paint spaint = new Paint();
                 spaint.setColor(Color.BLACK);
                 c.drawPaint(spaint);
                 spaint.setColor(Color.WHITE);
                 spaint.setTextSize(90);
                 spaint.setTextAlign(Paint.Align.CENTER);
-                c.drawText("YOU WIN!", c.getWidth()/2, c.getHeight()/2 - 80, spaint);
-                c.drawText( "Record: " + kq, c.getWidth()/2, c.getHeight()/2, spaint);
+                c.drawText("YOU WIN!", c.getWidth() / 2, c.getHeight() / 2 - 80, spaint);
+                c.drawText("Record: " + kq, c.getWidth() / 2, c.getHeight() / 2, spaint);
                 spaint.setTextAlign(Paint.Align.CENTER);
-                c.drawText("touch to quit",c.getWidth()/2, c.getHeight()/2 + 80, spaint);
-            }
-            else if(kq < 3){
+                c.drawText("touch to quit", c.getWidth() / 2, c.getHeight() / 2 + 80, spaint);
+            } else if (kq < 3) {
                 Paint spaint = new Paint();
                 spaint.setColor(Color.BLACK);
                 c.drawPaint(spaint);
                 spaint.setColor(Color.WHITE);
                 spaint.setTextSize(90);
                 spaint.setTextAlign(Paint.Align.CENTER);
-                c.drawText("YOU LOSE!", c.getWidth()/2, c.getHeight()/2 - 80, spaint);
-                c.drawText( "Record: " + kq, c.getWidth()/2, c.getHeight()/2, spaint);
+                c.drawText("YOU LOSE!", c.getWidth() / 2, c.getHeight() / 2 - 80, spaint);
+                c.drawText("Record: " + kq, c.getWidth() / 2, c.getHeight() / 2, spaint);
                 spaint.setTextAlign(Paint.Align.CENTER);
-                c.drawText("touch to quit",c.getWidth()/2, c.getHeight()/2 + 80, spaint);
+                c.drawText("touch to quit", c.getWidth() / 2, c.getHeight() / 2 + 80, spaint);
             }
         }
     }
@@ -79,7 +77,7 @@ public class GamePanel extends SurfaceView implements SurfaceHolder.Callback {
     @Override
     public void surfaceCreated(@NonNull SurfaceHolder surfaceHolder) {
         // TODO Auto-generated method stub
-        if(!thread.isAlive()){
+        if (!thread.isAlive()) {
             thread = new ThreadView(this);
             thread.setRunning(true);
             thread.start();
@@ -93,26 +91,26 @@ public class GamePanel extends SurfaceView implements SurfaceHolder.Callback {
 
     @Override
     public void surfaceDestroyed(@NonNull SurfaceHolder surfaceHolder) {
-        if(thread.isAlive()){
+        if (thread.isAlive()) {
             thread.setRunning(false);
         }
     }
 
     public class Time extends Thread {
         @Override
-        public void run(){
-            while (count > 0){
-                try{
+        public void run() {
+            while (count > 0) {
+                try {
                     count--;
                     // Thời gian còn lại
                     sleep(1000);
-                }
-                catch(InterruptedException e){
+                } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
             }
         }
     }
+
     public boolean onTouchEvent(MotionEvent event) {
         int eventaction = event.getAction();
         X = (int) event.getX();

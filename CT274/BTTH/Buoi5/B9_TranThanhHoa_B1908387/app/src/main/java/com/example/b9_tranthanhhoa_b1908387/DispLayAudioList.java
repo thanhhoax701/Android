@@ -27,10 +27,10 @@ public class DisplayAudioList extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_audio_list);
-        TextView txtChon = (TextView) findViewById(R.id.txtShow);
+        TextView txtChon = findViewById(R.id.txtShow);
 
         // Trở về của Audio
-        backAudio = (Button) findViewById(R.id.btnAudioTrove);
+        backAudio = findViewById(R.id.btnAudioTrove);
         backAudio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -40,7 +40,7 @@ public class DisplayAudioList extends AppCompatActivity {
 
 
         // Danh sách bài hát
-        lvAudio = (ListView) findViewById(R.id.lvAudio);
+        lvAudio = findViewById(R.id.lvAudio);
         ArrayList<String> listaudio = new ArrayList<String>();
         ArrayAdapter<String> adapteraudio = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listaudio);
         lvAudio.setAdapter(adapteraudio);

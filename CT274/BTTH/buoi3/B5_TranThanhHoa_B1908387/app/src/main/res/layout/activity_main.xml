@@ -19,7 +19,7 @@
         android:textColor="#ff1b2a"
         android:textSize="25sp"
         android:textStyle="bold"
-        android:typeface="normal"/>
+        android:typeface="normal" />
 
     <EditText
         android:id="@+id/value_edit"
@@ -31,8 +31,8 @@
         android:hint="Nhập vào một số"
         android:inputType="numberDecimal"
         android:lines="1"
-        android:textSize="25sp"
-        android:textColor="#f00"/>
+        android:textColor="#f00"
+        android:textSize="25sp" />
 
     <RelativeLayout
         android:layout_width="fill_parent"

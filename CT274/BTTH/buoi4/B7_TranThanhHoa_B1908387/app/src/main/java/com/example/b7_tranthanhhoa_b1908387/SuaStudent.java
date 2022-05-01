@@ -18,14 +18,14 @@ public class SuaStudent extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sua_student);
 
-        final EditText sott = (EditText) this.findViewById(R.id.stt);//Thêm
-        final EditText masosv = (EditText) this.findViewById(R.id.mssv);//Thêm
-        final EditText ten = (EditText) this.findViewById(R.id.hoten);
-        final EditText email = (EditText) this.findViewById(R.id.email);
-        final EditText sodienthoai = (EditText) this.findViewById(R.id.phone);
-        final TextView ct = (TextView) this.findViewById(R.id.hienthi);
-        Button suacontact = (Button) this.findViewById(R.id.btnsua);
-        Button trove = (Button) this.findViewById(R.id.btntrove);
+        final EditText sott = this.findViewById(R.id.stt);//Thêm
+        final EditText masosv = this.findViewById(R.id.mssv);//Thêm
+        final EditText ten = this.findViewById(R.id.hoten);
+        final EditText email = this.findViewById(R.id.email);
+        final EditText sodienthoai = this.findViewById(R.id.phone);
+        final TextView ct = this.findViewById(R.id.hienthi);
+        Button suacontact = this.findViewById(R.id.btnsua);
+        Button trove = this.findViewById(R.id.btntrove);
 
         suacontact.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -59,6 +59,5 @@ public class SuaStudent extends AppCompatActivity {
                 startActivity(intent3);
             }
         });
-
     }
 }

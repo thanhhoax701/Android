@@ -31,8 +31,8 @@ public class DisplayAllContact extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_all_contact);
 
-        backContact = (Button) findViewById(R.id.btnTroveContact);
-        lvContact = (ListView) findViewById(R.id.lvContact);
+        backContact = findViewById(R.id.btnTroveContact);
+        lvContact = findViewById(R.id.lvContact);
         ArrayList<String> list = new ArrayList<String>();
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, list);
         lvContact.setAdapter(adapter);

@@ -18,25 +18,23 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickWebBrowser(View view) {
-        EditText txt_url = (EditText) findViewById(R.id.nhapUrl);
+        EditText txt_url = findViewById(R.id.nhapUrl);
         String url = txt_url.getText().toString();
-        Intent i = new Intent(android.content.Intent.ACTION_VIEW,
-                Uri.parse(url));
+        Intent i = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse(url));
         startActivity(i);
     }
+
     public void onClickMakeCalls(View view) {
-        EditText phone_number = (EditText)
-                findViewById(R.id.nhapNumberPhone);
+        EditText phone_number = findViewById(R.id.nhapNumberPhone);
         String pn = phone_number.getText().toString();
-        Intent i = new Intent(android.content.Intent.ACTION_DIAL,
-                Uri.parse("tel:"+pn));
+        Intent i = new Intent(android.content.Intent.ACTION_DIAL, Uri.parse("tel:" + pn));
         startActivity(i);
     }
+
     public void onClickShowMap(View view) {
-        EditText position = (EditText) findViewById(R.id.nhapLatLon);
+        EditText position = findViewById(R.id.nhapLatLon);
         String ps = position.getText().toString();
-        Intent i = new Intent(android.content.Intent.ACTION_VIEW,
-                Uri.parse("geo:" + ps));
+        Intent i = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse("geo:" + ps));
         startActivity(i);
     }
 }

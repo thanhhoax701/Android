@@ -15,8 +15,8 @@ public class Activity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_2);
 
-        final EditText receiveValueEdit = (EditText) findViewById(R.id.value_receiver);
-        final Button callReceiverButton = (Button) findViewById(R.id.call_button);
+        final EditText receiveValueEdit = findViewById(R.id.value_receiver);
+        final Button callReceiverButton = findViewById(R.id.call_button);
         //Lấy về Bundle được gửi kèm Intent rồi lấy ra giá trị
         Bundle receiveBundle = this.getIntent().getExtras();
         final long receiveValue = receiveBundle.getLong("value");

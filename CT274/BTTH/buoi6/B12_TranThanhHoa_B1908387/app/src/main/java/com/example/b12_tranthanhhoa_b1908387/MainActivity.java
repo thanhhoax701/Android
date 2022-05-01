@@ -43,8 +43,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void Anhxa() {
-        btnKt = (Button) findViewById(R.id.btnKt);
-        btnHttpGet = (Button) findViewById(R.id.btnHttpget);
-        btnHttpPost = (Button) findViewById(R.id.btnHttppost);
+        btnKt = findViewById(R.id.btnKt);
+        btnHttpGet = findViewById(R.id.btnHttpget);
+        btnHttpPost = findViewById(R.id.btnHttppost);
     }
 }

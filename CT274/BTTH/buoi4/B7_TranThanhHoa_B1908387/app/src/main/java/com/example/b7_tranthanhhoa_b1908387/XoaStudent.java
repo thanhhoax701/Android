@@ -17,14 +17,14 @@ public class XoaStudent extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_xoa_student);
 
-        final EditText so=(EditText)this.findViewById(R.id.sttxoa);
-        final TextView ct=(TextView)this.findViewById(R.id.hienthi);
-        Button xoacontact=(Button)this.findViewById(R.id.btnxoasv);
-        Button btntrove=(Button)this.findViewById(R.id.btntrove);
-        xoacontact.setOnClickListener(new View.OnClickListener(){
+        final EditText so = this.findViewById(R.id.sttxoa);
+        final TextView ct = this.findViewById(R.id.hienthi);
+        Button xoacontact = this.findViewById(R.id.btnxoasv);
+        Button btntrove = this.findViewById(R.id.btntrove);
+        xoacontact.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 db.open();
-                int chiso=Integer.parseInt(so.getText().toString());
+                int chiso = Integer.parseInt(so.getText().toString());
                 //---delete a contact---
                 if (db.deleteStudent(chiso))
                     ct.setText("thành công.");
@@ -37,10 +37,9 @@ public class XoaStudent extends AppCompatActivity {
         btntrove.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent4=new Intent(XoaStudent.this,MainActivity.class);
+                Intent intent4 = new Intent(XoaStudent.this, MainActivity.class);
                 startActivity(intent4);
             }
         });
-
     }
 }

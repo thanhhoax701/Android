@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity5"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".Activity5">
 
     <TextView
         android:id="@+id/selection"
@@ -18,8 +18,7 @@
     <ListView
         android:id="@android:id/list"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-    </ListView>
+        android:layout_height="wrap_content"></ListView>
 
     <TextView
         android:id="@android:id/empty"

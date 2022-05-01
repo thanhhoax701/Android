@@ -24,7 +24,7 @@ public class DisplayPictureList extends AppCompatActivity {
         setContentView(R.layout.activity_display_picture_list);
 
         // Trở về của Picture
-        backPicture = (Button) findViewById(R.id.btnPictureTrove);
+        backPicture = findViewById(R.id.btnPictureTrove);
         backPicture.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -32,7 +32,7 @@ public class DisplayPictureList extends AppCompatActivity {
             }
         });
 
-        lvPicture = (ListView) findViewById(R.id.lvPicture);
+        lvPicture = findViewById(R.id.lvPicture);
         ArrayList<String> listImage = new ArrayList<String>();
         ArrayAdapter<String> adapterImage = new ArrayAdapter<String>(this,
                 android.R.layout.simple_list_item_1, listImage);

@@ -39,7 +39,6 @@ public class DBAdapter {
         DatabaseHelper(Context context) {
             super(context, DATABASE_NAME, null, DATABASE_VERSION);
         }
-
         //Sinh ra CSDL SQLite tên db và tạo bảng sinh viêns.
         @Override
         public void onCreate(SQLiteDatabase db) {

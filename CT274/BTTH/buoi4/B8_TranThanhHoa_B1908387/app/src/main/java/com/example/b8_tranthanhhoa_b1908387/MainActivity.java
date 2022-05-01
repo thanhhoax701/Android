@@ -31,15 +31,16 @@ public class MainActivity extends AppCompatActivity {
     public void onClickAddName(View view) {
         // Add a new student record
         ContentValues values = new ContentValues();
-        values.put(StudentsProvider.NAME,((EditText)findViewById(R.id.editText2)).getText().toString());
-        values.put(StudentsProvider.BUOI,((EditText)findViewById(R.id.editText3)).getText().toString());
+        values.put(StudentsProvider.NAME, ((EditText) findViewById(R.id.editText2)).getText().toString());
+        values.put(StudentsProvider.BUOI, ((EditText) findViewById(R.id.editText3)).getText().toString());
         Uri uri = getContentResolver().insert(StudentsProvider.CONTENT_URI, values);
-        Toast.makeText(getBaseContext(),uri.toString(), Toast.LENGTH_LONG).show();
+        Toast.makeText(getBaseContext(), uri.toString(), Toast.LENGTH_LONG).show();
     }
+
     public void onClickRetrieveStudents(View view) {
         Uri students = StudentsProvider.CONTENT_URI;
         String[] projection = {StudentsProvider._ID, StudentsProvider.NAME, StudentsProvider.BUOI};
-        CursorLoader loader = new CursorLoader(this,students, projection,null, null,null);
+        CursorLoader loader = new CursorLoader(this, students, projection, null, null, null);
         Cursor c = loader.loadInBackground();
 //        c.moveToFirst();
 //        String s = "";
@@ -78,8 +79,7 @@ public class MainActivity extends AppCompatActivity {
 //                    return false;
 //                }
 //            });
-        }
-        else {
+        } else {
             Toast.makeText(this, "Chưa có sinh viên", Toast.LENGTH_SHORT).show();
         }
     }

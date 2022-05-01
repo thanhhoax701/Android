@@ -18,7 +18,7 @@ public class StaticResources extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_static_resources);
 
-        textBoxdh = (TextView) findViewById(R.id.edithd);
+        textBoxdh = findViewById(R.id.edithd);
         // Load tập tin văn bản trong thư mục raw
         InputStream is = this.getResources().openRawResource(R.raw.huongdan);
         InputStreamReader ir = new InputStreamReader(is);

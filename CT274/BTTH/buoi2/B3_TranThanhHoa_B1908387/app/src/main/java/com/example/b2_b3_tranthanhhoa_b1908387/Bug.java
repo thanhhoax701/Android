@@ -18,9 +18,9 @@ public class Bug {
     int sX = 30;
     int sY = 30;
 
-    public Bug(Context context){
+    public Bug(Context context) {
         Resources res = context.getResources();
-        bitmap = BitmapFactory.decodeResource(res,R.drawable.bug);
+        bitmap = BitmapFactory.decodeResource(res, R.drawable.bug);
         background = BitmapFactory.decodeResource(res, R.drawable.background);
     }
 
@@ -36,10 +36,10 @@ public class Bug {
         x += sX;
         y += sY;
         //Neu cham bien thi quay lai va doi Ball
-        if (x<=0||(x>=w- dia)) {
+        if (x <= 0 || (x >= w - dia)) {
             sX = -sX;
         }
-        if (y<=0||y>=h-dia) {
+        if (y <= 0 || y >= h - dia) {
             sY = -sY;
         }
     }

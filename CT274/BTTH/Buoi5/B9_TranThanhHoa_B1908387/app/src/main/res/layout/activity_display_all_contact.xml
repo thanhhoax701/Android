@@ -4,17 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DisplayAllContact"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".DisplayAllContact">
 
     <Button
         android:id="@+id/btnTroveContact"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:background="#ADABAD"
-        android:textSize="18sp"
-        android:text="TRỞ VỀ MÀN HÌNH CHÍNH" />
+        android:gravity="center"
+        android:text="TRỞ VỀ MÀN HÌNH CHÍNH"
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/txt"
@@ -29,8 +29,8 @@
         android:textStyle="bold" />
 
     <ListView
+        android:id="@+id/lvContact"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/lvContact"/>
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

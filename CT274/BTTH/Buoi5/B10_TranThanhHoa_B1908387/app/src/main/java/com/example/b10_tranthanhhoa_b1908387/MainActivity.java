@@ -35,11 +35,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        textBox = (EditText) findViewById(R.id.txtText1);
-        SaveExt = (Button) findViewById(R.id.btnSave2);
-        LoadExt = (Button) findViewById(R.id.btnLoad2);
+        textBox = findViewById(R.id.txtText1);
+        SaveExt = findViewById(R.id.btnSave2);
+        LoadExt = findViewById(R.id.btnLoad2);
 
-        help = (Button) findViewById(R.id.help);
+        help = findViewById(R.id.help);
         help.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

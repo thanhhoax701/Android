@@ -14,9 +14,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        TextView newmessage = (TextView) findViewById(R.id.newmassage);
-        TextView inbox = (TextView) findViewById(R.id.inbox);
-        final TextView exit = (TextView) findViewById(R.id.exit);
+        TextView newmessage = findViewById(R.id.newmassage);
+        TextView inbox = findViewById(R.id.inbox);
+        final TextView exit = findViewById(R.id.exit);
 
         newmessage.setOnClickListener(new View.OnClickListener() {
             @Override

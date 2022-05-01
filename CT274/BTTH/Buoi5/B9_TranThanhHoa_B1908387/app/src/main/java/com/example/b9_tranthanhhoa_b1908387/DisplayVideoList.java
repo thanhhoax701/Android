@@ -29,7 +29,7 @@ public class DisplayVideoList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_video_list);
         // Trở về của Video
-        backVideo = (Button) findViewById(R.id.btnVideoTrove);
+        backVideo = findViewById(R.id.btnVideoTrove);
         backVideo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -37,7 +37,7 @@ public class DisplayVideoList extends AppCompatActivity {
             }
         });
 
-        lvVideo = (ListView) findViewById(R.id.lvVideo);
+        lvVideo = findViewById(R.id.lvVideo);
         ArrayList<Bitmap> list4 = new ArrayList<Bitmap>();
         ArrayAdapter<Bitmap> adapter4 = new ArrayAdapter<Bitmap>(this, android.R.layout.simple_list_item_1, list4);
         lvVideo.setAdapter(adapter4);

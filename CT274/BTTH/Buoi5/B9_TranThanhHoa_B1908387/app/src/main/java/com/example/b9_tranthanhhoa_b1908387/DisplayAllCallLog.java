@@ -29,8 +29,8 @@ public class DisplayAllCallLog extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_all_call_log);
 
-        backCall = (Button) findViewById(R.id.btnTroveCall);
-        lvCallLog = (ListView) findViewById(R.id.lvCallLog);
+        backCall = findViewById(R.id.btnTroveCall);
+        lvCallLog = findViewById(R.id.lvCallLog);
 
         ArrayList<String> list2 = new ArrayList<String>();
         ContentResolver cr2 = getContentResolver();

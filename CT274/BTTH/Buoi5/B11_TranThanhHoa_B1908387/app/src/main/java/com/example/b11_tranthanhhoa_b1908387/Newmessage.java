@@ -17,27 +17,20 @@ import android.widget.Toast;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_newmessage);
 
-        Button btn = (Button)this.findViewById(R.id.send);
-        Button exit = (Button)this.findViewById(R.id.exitinbox);
-        TextView hienthi = (TextView) findViewById(R.id.hienthi);
+        Button btn =this.findViewById(R.id.send);
+        Button exit = this.findViewById(R.id.exitinbox);
+        TextView hienthi = findViewById(R.id.hienthi);
 
         btn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-                EditText phone = (EditText) findViewById(R.id.phone);
-                EditText message = (EditText) findViewById(R.id.message);
+                EditText phone =  findViewById(R.id.phone);
+                EditText message =  findViewById(R.id.message);
                 try{
                     SmsManager sms = SmsManager.getDefault();
-                    sms.sendTextMessage(phone.getText().toString(), null,
-                            message.getText().toString(), null, null);
-//                    Toast toast = Toast.makeText(Newmessage.this, "SMS sent successful", Toast.LENGTH_LONG);
-//                    toast.show();
-//                    Toast.makeText(Newmessage.this, "SMS sent successful", Toast.LENGTH_LONG).show();
+                    sms.sendTextMessage(phone.getText().toString(), null, message.getText().toString(), null, null);
                     hienthi.setText("SMS sent successful");
                 }catch(Exception e){
-//                    Toast toast = Toast.makeText(Newmessage.this, "Sending SMS failed",Toast.LENGTH_LONG);
-//                    toast.show();
-//                    Toast.makeText(Newmessage.this, "Sending SMS failed",Toast.LENGTH_LONG).show();
                     hienthi.setText("Sending SMS failed");
                     e.printStackTrace();
                 }

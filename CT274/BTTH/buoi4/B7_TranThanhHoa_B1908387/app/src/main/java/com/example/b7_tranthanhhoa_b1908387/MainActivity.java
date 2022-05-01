@@ -26,12 +26,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button themsv = (Button) this.findViewById(R.id.btnthemsv);
-        Button xemtatcasv = (Button) this.findViewById(R.id.btnxemtatca);
-        Button xemmotsv = (Button) this.findViewById(R.id.btnxemmotsv);
-        Button suamotsv = (Button) this.findViewById(R.id.btncapnhatsv);
-        Button xoamotsv = (Button) this.findViewById(R.id.btnxoasv);
-        Button back = (Button) this.findViewById(R.id.btntrove);
+        Button themsv = this.findViewById(R.id.btnthemsv);
+        Button xemtatcasv = this.findViewById(R.id.btnxemtatca);
+        Button xemmotsv = this.findViewById(R.id.btnxemmotsv);
+        Button suamotsv = this.findViewById(R.id.btncapnhatsv);
+        Button xoamotsv = this.findViewById(R.id.btnxoasv);
+        Button back = this.findViewById(R.id.btntrove);
 
         //---Thêm một sinh viên---
         themsv.setOnClickListener(new View.OnClickListener() {
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //---get all sinh viêns---
-        lv = (ListView) findViewById(R.id.lvperson);
+        lv = findViewById(R.id.lvperson);
         //Tạo ArrayList object
         arrList = new ArrayList<String>();
         //Gán Data Source (ArrayList object) vào ArrayAdapter
@@ -108,9 +108,9 @@ public class MainActivity extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //finish();
-                Intent it = new Intent(MainActivity.this, MainActivity.class);
-                startActivity(it);
+                finish();
+//                Intent it = new Intent(MainActivity.this, MainActivity.class);
+//                startActivity(it);
             }
         });
 

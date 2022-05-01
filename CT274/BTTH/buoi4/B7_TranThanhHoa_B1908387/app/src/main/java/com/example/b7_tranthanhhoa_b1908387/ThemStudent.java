@@ -19,13 +19,13 @@ public class ThemStudent extends AppCompatActivity {
         setContentView(R.layout.activity_them_student);
 
         //Thêm contact
-        final EditText masosv = (EditText) this.findViewById(R.id.mssv);//Thêm
-        final EditText ten = (EditText) this.findViewById(R.id.hoten);
-        final EditText email = (EditText) this.findViewById(R.id.email);
-        final EditText phone = (EditText) this.findViewById(R.id.phone);
-        final TextView ct = (TextView) this.findViewById(R.id.studentduocthem);
-        Button themcontact = (Button) this.findViewById(R.id.btnthem);
-        Button trove = (Button) this.findViewById(R.id.btntrove);
+        final EditText masosv = this.findViewById(R.id.mssv);//Thêm
+        final EditText ten = this.findViewById(R.id.hoten);
+        final EditText email = this.findViewById(R.id.email);
+        final EditText phone = this.findViewById(R.id.phone);
+        final TextView ct = this.findViewById(R.id.studentduocthem);
+        Button themcontact = this.findViewById(R.id.btnthem);
+        Button trove = this.findViewById(R.id.btntrove);
 
         themcontact.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {

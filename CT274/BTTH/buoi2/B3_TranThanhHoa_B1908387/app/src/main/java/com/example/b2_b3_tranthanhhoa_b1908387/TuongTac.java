@@ -10,18 +10,20 @@ import android.view.MotionEvent;
 import android.view.View;
 
 public class TuongTac extends View {
-    public final Paint paint =new Paint();
-    public final Canvas c =new Canvas();
+    public final Paint paint = new Paint();
+    public final Canvas c = new Canvas();
     public Bitmap bitmap;
 
-    public float x=50;
-    public float y=50;
+    public float x = 50;
+    public float y = 50;
     public int duongkinh;
-    public String st=" Begin test touch";
+    public String st = " Begin test touch";
+
     public TuongTac(Context context) {
         super(context);
         // TODO Auto-generated constructor stub
     }
+
     @Override
     protected void onDraw(Canvas c) {
         // TODO Auto-generated method stub
@@ -31,10 +33,11 @@ public class TuongTac extends View {
         paint.setColor(Color.BLUE);
         Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.ball);
         c.drawBitmap(bitmap, x, y, paint);
-        duongkinh=bitmap.getWidth();
+        duongkinh = bitmap.getWidth();
         paint.setTextSize(60);
         c.drawText(st, x, y, paint);
     }
+
     public boolean onTouchEvent(MotionEvent event) {
         float a = 0;
         float b = 0;
@@ -42,19 +45,19 @@ public class TuongTac extends View {
         float d = 0;
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                a = event.getX() - (duongkinh/2);
-                b = event.getY() - (duongkinh/2);
-                st= "ACTION Down";
+                a = event.getX() - (duongkinh / 2);
+                b = event.getY() - (duongkinh / 2);
+                st = "ACTION Down";
                 break;
             case MotionEvent.ACTION_MOVE:
-                x = event.getX() - (duongkinh/2);
-                y = event.getY() - (duongkinh/2);
-                st="ACTION Move";
+                x = event.getX() - (duongkinh / 2);
+                y = event.getY() - (duongkinh / 2);
+                st = "ACTION Move";
                 break;
             case MotionEvent.ACTION_UP:
-                c = event.getX() - (duongkinh/2);
-                d = event.getY() - (duongkinh/2);
-                st="ACTION Up";
+                c = event.getX() - (duongkinh / 2);
+                d = event.getY() - (duongkinh / 2);
+                st = "ACTION Up";
                 break;
         }
         invalidate();

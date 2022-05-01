@@ -16,8 +16,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //Khai báo EditText và Button
-        final EditText editValue = (EditText) findViewById(R.id.value_edit);
-        final Button sendButton = (Button) findViewById(R.id.send_button);
+        final EditText editValue = findViewById(R.id.value_edit);
+        final Button sendButton = findViewById(R.id.send_button);
         // Đáp ứng tương tác người dùng
         sendButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -28,8 +28,7 @@ public class MainActivity extends AppCompatActivity {
                 //lại thì gán value=0.
                 if (!valueString.equals("")) {
                     value = Long.parseLong(valueString);
-                }
-                else {
+                } else {
                     value = 0;
                 }
                 //Tạo 1 đối tượng Bundle để gửi đi cùng Intent

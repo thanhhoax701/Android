@@ -17,7 +17,7 @@ public class MediaContent extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_media_content);
 
-        backMedia = (Button) this.findViewById(R.id.btnTroveMeadia);
+        backMedia = this.findViewById(R.id.btnTroveMeadia);
         //Trở về
         backMedia.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -27,7 +27,7 @@ public class MediaContent extends AppCompatActivity {
         });
 
         // PopMenu
-        popupmenu = (Button) findViewById(R.id.btnPopMedia);
+        popupmenu = findViewById(R.id.btnPopMedia);
         popupmenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -50,23 +50,20 @@ public class MediaContent extends AppCompatActivity {
             public boolean onMenuItemClick(MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.audio:
-                        Intent intent1 = new Intent(MediaContent.this,
-                                DisplayAudioList.class);
+                        Intent intent1 = new Intent(MediaContent.this, DisplayAudioList.class);
                         startActivity(intent1);
                         break;
                 }
                 switch (item.getItemId()) {
                     case R.id.video:
-                        Intent intent2 = new Intent(MediaContent.this,
-                                DisplayVideoList.class);
+                        Intent intent2 = new Intent(MediaContent.this, DisplayVideoList.class);
                         startActivity(intent2);
                         ;
                         break;
                 }
                 switch (item.getItemId()) {
                     case R.id.picture:
-                        Intent intent3 = new Intent(MediaContent.this,
-                                DisplayPictureList.class);
+                        Intent intent3 = new Intent(MediaContent.this, DisplayPictureList.class);
                         startActivity(intent3);
                         break;
                 }

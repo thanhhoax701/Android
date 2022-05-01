@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".StaticResources"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".StaticResources">
 
     <TextView
         android:layout_width="match_parent"
@@ -46,6 +46,6 @@
         android:padding="5dp"
         android:text=""
         android:textColor="#4A63F1"
-        android:textSize="20sp"/>
+        android:textSize="20sp" />
 
 </LinearLayout>

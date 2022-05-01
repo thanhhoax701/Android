@@ -48,23 +48,4 @@ public class Inbox extends ListActivity {
         toast.show();
     }
 
-//    public void onKey(View v, int keyCode, KeyEvent event){
-//        if (event.getAction() == KeyEvent.ACTION_DOWN
-//                && keyCode == KeyEvent.KEYCODE_BACK) {
-//            finish();
-//        }
-//    }
-//    @Override
-//    protected void onResume() {
-//        super.onResume();
-//    }
-//    @Override
-//    protected void onPause() {
-//        super.onPause();
-//    }
-//    @Override
-//    protected void onDestroy() {
-//        super.onDestroy();
-//    }
-
 }

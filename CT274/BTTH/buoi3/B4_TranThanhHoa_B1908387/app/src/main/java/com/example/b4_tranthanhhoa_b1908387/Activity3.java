@@ -15,7 +15,6 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 public class Activity3 extends AppCompatActivity {
-
     EditText txtTen;
     TextView txtChon;
     Button btn3;
@@ -27,10 +26,11 @@ public class Activity3 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_3);
-        txtTen=(EditText) findViewById(R.id.txtTen);
-        txtChon=(TextView) findViewById(R.id.txtSelection);
 
-        lv3 = (ListView) findViewById(R.id.lvPerson);
+        txtTen = findViewById(R.id.txtTen);
+        txtChon = findViewById(R.id.txtSelection);
+
+        lv3 = findViewById(R.id.lvPerson);
         //1. Tạo ArrayList object
         arrayList = new ArrayList<String>();
 
@@ -39,24 +39,24 @@ public class Activity3 extends AppCompatActivity {
 
         //3. gán Adapter vào ListView
         lv3.setAdapter(arrayAdapter);
-        btn3 = (Button) findViewById(R.id.btnNhap);
+        btn3 = findViewById(R.id.btnNhap);
 
         //4. Xử lý sự kiện nhấn nút Nhập
         btn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                arrayList.add(txtTen.getText()+"");
+                arrayList.add(txtTen.getText() + "");
                 arrayAdapter.notifyDataSetChanged();
             }
         });
 
         //5. Xử lý sự kiện chọn một phần tử trong ListView
         lv3.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            public void onItemClick(AdapterView<?> arg0,View arg1, int arg2,long arg3) {
+            public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
                 txtChon.setText("position : " + arg2 + "; value =" + arrayList.get(arg2));
             }
         });
-        
+
         //6. xử lý sự kiện Long click
         lv3.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
@@ -66,14 +66,5 @@ public class Activity3 extends AppCompatActivity {
                 return false;
             }
         });
-
-//        lv3.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-//            @Override
-//            public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
-//                arrayList.remove(i);//xóa phần tử thứ arg2
-//                arrayAdapter.notifyDataSetChanged();
-//                return false;
-//            }
-//        });
     }
 }
