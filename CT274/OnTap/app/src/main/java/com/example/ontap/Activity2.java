@@ -34,7 +34,6 @@ public class Activity2 extends AppCompatActivity {
         btnDTB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 Double d1,d2,d3;
                 d1 = Double.parseDouble(edt1.getText().toString());
                 d2 = Double.parseDouble(edt2.getText().toString());
