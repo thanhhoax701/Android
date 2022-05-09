@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Thithu</string>
+    <string name="title">ĐỀ THI THỰC HÀNH SỐ 9</string>
+    <string name="ct1">Công tắc 1</string>
+    <string name="ct2">Công tắc 2</string>
+    <string name="ct3">Công tắc 3</string>
+    <string name="chuakt">Chưa kiểm tra</string>
+    <string name="dieukhien">điều khiển</string>
+    <string name="thoat">thoát</string>
+
+</resources>
